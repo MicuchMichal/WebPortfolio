@@ -1,0 +1,20 @@
+<dokumenttag>
+	<headtag>
+		<metatag>Meta Data</metatag>
+		<linktag>Adding external files</linktag>
+		<titletag>Page title</titletag>
+	</headtag>
+	<bodytag>
+		<headertag>
+			<h1tag>Hlavicka</h1tag>
+		</headertag>
+		<sectiontag>
+			<articletag>Clanok</articletag>
+			<h1tag>Nadpis</h1tag>
+			<ptag>paragraf</ptag>
+		</sectiontag>
+		<footertag>
+			<ptag>Page footer</ptag>
+		</footertag>
+	</bodytag>
+</dokumenttag>

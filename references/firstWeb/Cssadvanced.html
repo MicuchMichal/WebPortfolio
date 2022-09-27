@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="sk">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="css" content="pokrocile css">
+    <meta name="keywords" content="portfolio, css">
+    <meta name="author" content="Michal Micuch">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="blog.css">
+    <link rel="shortcut icon" href="img/titleImg.png">
+    <title>Css Advanced</title>
+</head>
+
+<body>
+<header class="ahoj">
+    <a href="index.html">
+        <img src="img/MMlogowhite.png" alt="logo Michal Micuch">
+    </a>
+    <nav>
+        <a href="Blog.html">Blog</a>
+    </nav>
+</header>
+<section>
+    <div id="section-table-css2">
+        <h1>Pokrocile CSS</h1>
+        <div id="section-content">
+            <h2>Content, premenne, calc</h2>
+            <table class="tabulky-css">
+                <tr>
+                    <th>Vlastnost</th>
+                    <th>popis</th>
+                    <th>priklad pouzitia</th>
+                    <th>vysledok</th>
+                </tr>
+                <tr>
+                    <td><code>content:</code></td>
+                    <td>Pomocou content nastavujem co bude pred alebo za kazdym elementom v pseudo-class</td>
+                    <td><code>
+                        h4:before{ <br>
+                            content: "Sekcia: ";<br>
+                        }<br>
+                        h4:after{<br>
+                        content: " :koniec";<br>
+                        }
+                    </code></td>
+                    <td class="h4-content">
+                        <h4>NAdpis1</h4>
+                        <h4>nadpis2</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>--premenna</code></td>
+                    <td>Deklarovanie premennej v CSS</td>
+                    <td><code>--farba: brown;<br> color: var(--farba);</code></td>
+                    <td style="color: brown">Hneda farba zadana premennou</td>
+                </tr>
+                <tr>
+                    <td><code>calc</code></td>
+                    <td>prepocitava rozne hodnoty napr. podla sirky okna</td>
+                    <td><code>width: calc(5% +50px)</code></td>
+                    <td>
+                        <div style="width: calc(50% + 50px); height: 30px; border: 1px solid white">div siroky 50% + 50px</div>
+                    </td>
+                </tr>
+            </table>
+            <h2>Posuvniky</h2>
+            <table class="tabulky-css">
+                <tr>
+                    <th>Vlastnost</th>
+                    <th>popis</th>
+                    <th>priklad pouzitia</th>
+                    <th>vysledok</th>
+                </tr>
+                <tr>
+                    <td><code>-webkit-scrollbar</code></td>
+                    <td>Nastavuje posuvnik samotny. Napr. mu mozem urcit sirku.</td>
+                    <td><code>
+                        #styl01::-webkit-scrollbar { <br>
+                        width: 30px;<br>
+                        }
+                        </code></td>
+                    <td>
+                        <div class="posuvniky" id="styl02" style="float: left">
+                            <p>P</p><p>o</p><p>s</p><p>u</p><p>v</p><p>n</p><p>i</p><p>k</p>
+                        </div>
+                        <p>Spolu musim nastavit aj pozadie a samotny posuvnik, inak bude neviditelny!</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>-webkit-scrollbar-track</code></td>
+                    <td>Nastavuje pozadie posuvniku</td>
+                    <td>
+                        <code>
+                            #styl01::-webkit-scrollbar-track { <br>
+                            background-color: blue <br>
+                            border-radius: 10px;<br>
+                            }
+                        </code>
+                    </td>
+                    <td>
+                        <div class="posuvniky" id="styl03" style="float: left">
+                            <p>P</p><p>o</p><p>s</p><p>u</p><p>v</p><p>n</p><p>i</p><p>k</p>
+                        </div>
+                        <p>Pozadiu scrollbaru som nastavil modru farbu spolu s border-radiusom na zaoblenie</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>-webkit-scrollbar-thumb</code></td>
+                    <td>nastavuje vlastnost posuvneho tlacitka</td>
+                    <td>
+                        <code>
+                            #styl04::-webkit-scrollbar-thumb { <br>
+                            background-color: red;<br>
+                            border-radius: 10px;<br>
+                            }
+                        </code>
+                    </td>
+                    <td>
+                        <div class="posuvniky" id="styl04" style="float: left">
+                            <p>P</p><p>o</p><p>s</p><p>u</p><p>v</p><p>n</p><p>i</p><p>k</p>
+                        </div>
+                        <p>uz celkom pekny scrollbar</p>
+                    </td>
+                </tr>
+            </table>
+            <h2>kurzory</h2>
+            <table class="kurzory-tabulka">
+                <tr>
+                    <th>Vlastnost</th>
+                    <th>popis</th>
+                    <th>priklad pouzitia</th>
+                    <th>vysledok</th>
+                </tr>
+                <tr>
+                    <td><code>cursor</code></td>
+                    <td>Zmeni vlastnost kurzora. Pomocou :hover pseudoselektoru mozeme menit aj vzhlad a farbu kurzora lubovolne sami.</td>
+                    <td>
+                        <div class="divy-kurzory" style="cursor: help">cursor: help</div>
+                        <div class="divy-kurzory" style="cursor: pointer">cursor: pointer</div>
+                        <div class="divy-kurzory" style="cursor: wait">cursor: wait</div>
+                        <div class="divy-kurzory" style="cursor: text">cursor: text</div>
+                        <div class="divy-kurzory" style="cursor: move">cursor: move</div>
+                        <div class="divy-kurzory" style="cursor: grab">cursor: grab</div>
+                        <div class="divy-kurzory" style="cursor: zoom-in">cursor: zoom-in</div>
+                        <div class="divy-kurzory" style="cursor: zoom-out">cursor: zoom-out</div>
+                        <div class="divy-kurzory" style="cursor: not-allowed">cursor: not-allowed</div>
+                        <div class="divy-kurzory" style="cursor: all-scroll">cursor: all-scroll</div>
+                        <div class="divy-kurzory" style="cursor: s-resize">cursor: s-resize</div>
+                        <div class="divy-kurzory" style="cursor: e-resize">cursor: e-resize</div>
+                        <div class="divy-kurzory" style="cursor: ne-resize">cursor: ne-resize</div>
+                        <div class="divy-kurzory" style="cursor: nw-resize">cursor: nw-resize</div>
+                        <div class="divy-kurzory" style="cursor: crosshair">cursor: crosshair</div>
+                        <div></div>
+                    </td>
+                </tr>
+            </table>
+            <h2>Pozadie elementov</h2>
+            <table class="tabulky-css">
+                <tr>
+                    <th>Vlastnost</th>
+                    <th>popis</th>
+                    <th>priklad pouzitia</th>
+                    <th>vysledok</th>
+                </tr>
+                <tr>
+                    <td><code>background-color</code></td>
+                    <td>meni pozadie elementu</td>
+                    <td><code>backround-color: blue;</code></td>
+                    <td><p style="background-color: #1a97bb ">Modre pozadie</p></td>
+                </tr>
+                <tr>
+                    <td><code>background-clip</code></td>
+                    <td>orezanie pozadia</td>
+                    <td><code>
+                        background-clip: border-box; <br>
+                        background-clip: padding-box; <br>
+                        background-clip: content-box;
+                    </code></td>
+                    <td>
+                        <div class="orezanie-pozadia" style="background-clip: border-box;">background-clip: border-box;</div>
+                        <div class="orezanie-pozadia" style="background-clip: padding-box;">background-clip: padding-box;</div>
+                        <div class="orezanie-pozadia" style="background-clip: content-box;">background-clip: content-box;</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>background-image</code></td>
+                    <td>pomocou url mozem ako pozadie zadelit obrazok</td>
+                    <td><code>background-image: url('strom.png');</code></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>background-position</code></td>
+                    <td>Mozem menit poziciu obrazka. Napr:
+                    <ul>
+                        <li>x% y% - pomocou relativnych hodnot</li>
+                        <li>0px 0px - pomocu absolutnych hodnot</li>
+                        <li>slovne - left top; left bottom; right center; center center....</li>
+                    </ul>
+                    </td>
+                    <td><code>background-position: 100px 0;</code></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>background-repeat</code></td>
+                    <td>urci ci sa ma obrazok opakovat
+                    <ul>
+                        <li>repeat - obrazok sa bude opakovat, pozadie sa vydlazdi obrazkom</li>
+                        <li>repeat-x - opakuje sa len vodorovne</li>
+                        <li>repeat-y - opakuje sa len zvislo</li>
+                        <li>no-repeat - neopakuje sa vobec</li>
+                    </ul>
+                    </td>
+                    <td><code>
+                        background-repeat: repeat;
+                        background-repeat: repeat-x;
+                        background-repeat: repeay-y;
+                        background-repeat: no-repeat;
+                    </code></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>background-size</code></td>
+                    <td>Lubovolne mozem menit velkost obrazka na pozadi:
+                    <ul>
+                        <li>sirka vyska - hodnoty zadavane %, px, em...</li>
+                        <li>cover - obrazok sa oreze ak treba a vyplni cely priestor pozadia</li>
+                        <li>contain - obrazok sa zmrsti podla velkosti elementu do ktoreho ho vkladam</li>
+                    </ul>
+                    </td>
+                    <td><code>
+                        background-size: 100px 100px; <br>
+                        background-size: cover; <br>
+                        background-size: contain;
+                    </code></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>background-origin</code></td>
+                    <td>Nastavuje k comu sa ma vztahovat pozicia obrazka na pozadi
+                    <ul>
+                        <li>padding-box - obrazok sa vztahuje k elementu vratane paddingu</li>
+                        <li>border-box - obrazok sa vztahuje az po okraj vratane ramceka</li>
+                        <li>content-box - obrazok sa vztahuje na obdah bez ramceka a paddingu</li>
+                    </ul>
+                    </td>
+                    <td><code>
+                        background-origin: padding-box; <br>
+                        background-origin: border-box; <br>
+                        background-origin: content-box;
+                    </code></td>
+                    <td></td>
+                </tr>
+            </table>
+            <h2>Animacie v CSS</h2>
+            <table class="tabulky-css">
+                <tr>
+                    <th>Vlastnost</th>
+                    <th>popis</th>
+                    <th>priklad pouzitia</th>
+                    <th>vysledok</th>
+                </tr>
+                <tr>
+                    <td><code>animation</code></td>
+                    <td>Pomocou tejto vlastnosti pridavam animacie.</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>@keyframes %</code></td>
+                    <td>Pomocou tohto prikazu vytvarame animacie. V tomto priklade zadavame priebeh animacie v %</td>
+                    <td><code>
+                        @keyframes farby { <br>
+                        0% {background-color: red;}<br>
+                        33% {background-color: green;}<br>
+                        67% {background-color: blue;}<br>
+                        100% {background-color: red}<br>
+                        }<br>
+                        .animacia{<br>
+                        animation: farby 5s infinite;<br>
+                        }
+                    </code></td>
+                    <td>
+                        <p class="animacia">animovany text: <br>
+                            Pozadie zacina cervenej farby; <br>
+                            v 33% sa zmeni farba na zelenu; <br>
+                            v 67% sa zmeni farba na modru; <br>
+                            a na konci animacie bude zas cervnea; <br>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>@keyframes <br> from to</code></td>
+                    <td>Animacie mozeme definovat aj slovne FROM TO.</td>
+                    <td><code>
+                        @keyframes pulz { <br>
+                        from {transform: scale(1);} <br>
+                        to {transform: scale(1.7);} <br>
+                        } <br>
+                        .animace2 { <br>
+                        animation: pulz 3s infinite; <br>
+                        }
+                    </code></td>
+                    <td><p class="animace2" style="margin-left: 50px">pulzujuci text</p></td>
+                </tr>
+                <tr>
+                    <td><code>@keyframes<br>kombinacie</code></td>
+                    <td>Animacie mozem kombinovat FROM % TO</td>
+                    <td><code>
+                        .animace3 { <br>
+                        animation: pohyb 10s infinite;<br>
+                        }<br>
+                        @keyframes pohyb {<br>
+                        from {margin-left: 0px;}<br>
+                        50% {margin-left: 40px;}<br>
+                        to {margin-left: 800px;}<br>
+                        }
+                    </code></td>
+                    <td><p class="animace3">Pohyblivy text</p></td>
+                </tr>
+            </table>
+            <h2>Priebeh animacii</h2>
+            <table class="tabulky-css-2">
+                <tr>
+                    <th>Nazov</th>
+                    <th>Popis</th>
+                    <th>priebeh animacie</th>
+                </tr>
+                <tr>
+                    <td><code>linear</code></td>
+                    <td>animacia prebieha rovnako rychlo v kazdom okamziku.</td>
+                    <td><div class="kruh" style="margin: auto" id="linear-animacia"></div></td>
+                </tr>
+                <tr>
+                    <td><code>ease</code></td>
+                    <td>animzcia prebiha na zaciatku a na konci pomaly, uprostred rychlo.</td>
+                    <td><div class="kruh" style="margin: auto" id="ease-animacia"></div></td>
+                </tr>
+                <tr>
+                    <td><code>ease-in</code></td>
+                    <td>animacia ide na zaciatku pomaly a postupne zrychluje</td>
+                    <td><div class="kruh" style="margin: auto" id="ease-in-animacia"></div></td>
+                </tr>
+                <tr>
+                    <td><code>ease-out</code></td>
+                    <td>animacia ide na zaciatku rychlo a postupne spomaluje</td>
+                    <td><div class="kruh" style="margin: auto" id="ease-out-animacia"></div></td>
+                </tr>
+                <tr>
+                    <td><code>ease-in-out</code></td>
+                    <td>pomalsie ease - na zaciatku a na konci ide pomaly</td>
+                    <td><div class="kruh" style="margin: auto" id="ease-in-out-animacia"></div></td>
+                </tr>
+                <tr>
+                    <td><code>step-start</code></td>
+                    <td>animacia prebieha skokom a konci na zaciatku priebehu</td>
+                    <td><div class="kruh" style="margin: auto" id="step-start-animacia"></div></td>
+                </tr>
+                <tr>
+                    <td><code>step-end</code></td>
+                    <td>animacia prebieha skokom a konci na konci priebehu</td>
+                    <td><div class="kruh" style="margin: auto" id="step-end-animacia"></div></td>
+                </tr>
+            </table>
+            <h2>Rotacie elementov v CSS</h2>
+            <table class="tabulky-css">
+                <tr>
+                    <th>Vlastnost</th>
+                    <th>popis</th>
+                    <th>priklad pouzitia</th>
+                    <th>vysledok</th>
+                </tr>
+                <tr>
+                    <td><code>transform<br>matrix()</code></td>
+                    <td>Pomocou tejto vlastnosti dokazeme rotovat elementy</td>
+                    <td><code>
+                        @keyframes animacia-1{<br>
+                        0%{transform: matrix(1,0,0,1,0,0);}<br>
+                        50%{transform: matrix(1,-1,1,1,0,0);}<br>
+                        100%{transform: matrix(1,0,0,1,0,0);}<br>
+                        }<br>
+                        .animation-matrix{<br>
+                        animation: animacia-1 5s linear infinite;<br>
+                        }<br>
+                    </code></td>
+                    <td>
+                        <div class="transform-krabica" id="animation-matrix"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>transform<br>rotate</code></td>
+                    <td>Prvky sa budu otacat. Mozem rotovat viacerimi smerymi:<br>
+                    <ul>
+                        <li>rotateX - os X</li>
+                        <li>rotateY - os Y</li>
+                        <li>rotateZ - os Z</li>
+                    </ul>
+                    </td>
+                    <td><code>
+                        @keyframes animace3{ <br>
+                        0%{transform: rotate(0deg);}<br>
+                        50%{transform: rotate(90deg);}<br>
+                        100%{transform: rotate(0deg);}<br>
+                        }<br>
+                        .animation-rotate{<br>
+                        animation: animace3 5s linear infinite;<br>
+                        }
+                    </code></td>
+                    <td>
+                        <div class="transform-krabica" id="animation-rotate"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>transform<br>skew</code></td>
+                    <td>Tato funkcia zkosi elementy podla osi X alebo Y<br>
+                        <ul>
+                            <li>skewX - os X</li>
+                            <li>skewY - os Y</li>
+                        </ul>
+                    </td>
+                    <td><code>
+                        @keyframes animace8{ <br>
+                        0%{transform: skew(0,0);}<br>
+                        50%{transform: skew(30deg, 30deg);}<br>
+                        100%{transform: skew(0,0);}<br>
+                        }<br>
+                        #animation-skew{<br>
+                        animation: animace8 5s linear infinite;<br>
+                        }
+                    </code></td>
+                    <td>
+                        <div class="transform-krabica" id="animation-skew"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <p id="right-bootom-text">Css</p>
+</section>
+</body>
+</html>

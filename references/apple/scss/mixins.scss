@@ -1,0 +1,26 @@
+@mixin centerItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+@mixin bottomLeftProducts {
+    margin: 0px 6px 12px 12px;
+    width: 47.5%;
+}
+@mixin bottomRightProducts {
+    margin: 0px 12px 12px 6px;
+    width: 47.5%;
+}
+@mixin bottomProductsHeightSmall {
+    height: 500px;
+}
+@mixin bottomProductsHeightMedium {
+    height: 489px;
+}
+@mixin bottomProductsHeightLarge {
+    height: 580px;
+}

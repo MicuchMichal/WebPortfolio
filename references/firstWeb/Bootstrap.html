@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="sk">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="tahak" content="Bootstrap">
+    <meta name="keywords" content="portfolio, bootstrap, tahak">
+    <meta name="author" content="Michal Micuch">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="bootstrapcss/bootstrap.min.css">
+    <script type="text/javascript" src="bootstrapjs/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="blog.css">
+
+    <link rel="shortcut icon" href="img/titleImg.png">
+    <title>bootstrap</title>
+</head>
+
+<body>
+<header class="ahoj">
+    <a href="index.html">
+        <img src="img/MMlogowhite.png" alt="logo Michal">
+    </a>
+    <nav>
+        <a href="Blog.html">Blog</a>
+    </nav>
+</header>
+<section>
+    <div id="section-table-bootstrap1">
+        <h1 style="margin-bottom: 50px; margin-top: 50px">Bootstrap</h1>
+        <div id="section-content">
+            <h2>Typografia</h2>
+            <table class="table-bootstrap">
+                <tr>
+                    <th style="width: 250px; text-align:center">Bootstrap trieda</th>
+                    <th style="width: 500px">popis</th>
+                    <th>ukazka</th>
+                </tr>
+                <tr>
+                    <td><code>.h1 - .h6</code></td>
+                    <td>lubovolny element nastyluju ako nadpis h1 az h6</td>
+                    <td><p class="h5">toto je .h5 nadpis</p><p class="h6">toto je .h6 nadpis</p></td>
+                </tr>
+                <tr>
+                    <td><code> .display-1 - .display-6</code></td>
+                    <td>zvyrazni text este viacej</td>
+                    <td class="display-6">toto je display 6</td>
+                </tr>
+                <tr>
+                    <td><code>.lead</code></td>
+                    <td>zvyrazni odstavec</td>
+                    <td class="lead">.lead zvyrazneny odstavec</td>
+                </tr>
+                <tr>
+                    <td><code>.text-muted</code></td>
+                    <td>pouziva sa s elementom <code>&lt;small&gt;</code> a vyjadruje mensi sedy podnadpis</td>
+                    <td><small class="text-muted">tento text vyuziva .text-muted classu</small></td>
+                </tr>
+                <tr>
+                    <td><code>.initialism</code></td>
+                    <td>vyuziva sa pri skratke <code>&lt;abbr&gt;</code> a zvyrazni jej text</td>
+                    <td><abbr title="Mestska hromadna doprava" class="initialism">MHD</abbr></td>
+                </tr>
+                <tr>
+                    <td><code>.blockquote</code></td>
+                    <td>pouziva sa s elementom <code>&lt;blockquote&gt;</code></td>
+                    <td><blockquote class="blockquote">Tento text je zvyraznena citacia.</blockquote></td>
+                </tr>
+                <tr>
+                    <td><code>.list-unstyled</code></td>
+                    <td>skryje odrazky v zozname</td>
+                    <td><ol class="list-unstyled">
+                        <li>prva odrazka zoradeneho zoznamu</li>
+                        <li>druha odrazka zoradeneho zoznamu</li>
+                    </ol></td>
+                </tr>
+                <tr>
+                    <td><code>.list-inline-item</code></td>
+                    <td>vypise prvky v zozname vedla seba nie pod seba (musia sa lisat do <code>&lt;li&gt;</code> elementu)</td>
+                    <td><ol>
+                        <li class="list-inline-item">prva polozka</li>
+                        <li class="list-inline-item">druha polozka</li>
+                        <li class="list-inline-item">tretia polozka</li>
+                    </ol></td>
+                </tr>
+                <tr>
+                    <td><code>.text-left<br>.text-center<br>.text-right<br>.text-justify</code></td>
+                    <td>triedy pre zarovnavanie textu</td>
+                    <td><p class="text-start">.text-left - zarovnanie vlavo</p><p class="text-center">.text-center - zarovnanie dostredu</p>
+                        <p class="text-end">.text-right - zarovnanie vpravo</p><p>.text-justify - zarovnanie do bloku</p></td>
+                </tr>
+                <tr>
+                    <td><code>.text-lowercase<br>.text-uppercase<br>.text-capitalize</code></td>
+                    <td>transformuje text na male/velke pismena</td>
+                    <td><p class="text-lowercase">.text-lowercase - male pismena v texte</p>
+                    <p class="text-uppercase">.text-uppercase - velke pismena v texte</p>
+                    <p class="text-capitalize">.text-capitalize - prve pismeno v kazdom slove je velke</p></td>
+                </tr>
+                <tr>
+                    <td><code>.fw-bold<br>.fw-normal<br>.fw-light<br>.font-italic</code></td>
+                    <td>trandofrmuje text na tucny/normalny/tenky/italiku</td>
+                    <td><p class="fw-bold">tucny text</p>
+                    <p class="fw-normal">normalny text</p>
+                    <p class="fw-light">tenky text</p>
+                    <p class="fst-italic">kurziva</p></td>
+                </tr>
+            </table>
+            <h2>Obrazky</h2>
+            <table class="table-bootstrap">
+                <tr>
+                    <th style="width: 250px; text-align:center">Bootstrap trieda</th>
+                    <th style="width: 500px">popis</th>
+                    <th>ukazka</th>
+                </tr>
+                <tr>
+                    <td><code>.img-fluid</code></td>
+                    <td>tato trieda zaisti ze obrazok nikdy nevytecie z rodicovskeho elementu</td>
+                    <td><img src="img/bsicon.png" alt="bootsrap ikona" class="img-fluid"> tento obrazok nikdy nepretecie</td>
+                </tr>
+                <tr>
+                    <td><code>.border<br>.border-0<br>.border-top-0<br>.border-right/left/bottom-0</code></td>
+                    <td>zapne/vypne ramcek okolo obrazka</td>
+                    <td style="text-align: center"><img src="img/ftacik.png" alt="vtacik" class="border">
+                        <img src="img/ftacik.png" alt="vtacik" class="border-bottom"></td>
+                </tr>
+                <tr>
+                    <td><code>.border-primary<br>.border-secondary<br>.border-success<br>.border-danger...</code></td>
+                    <td>nastavuje barvu ramceka</td>
+                    <td><img src="img/ftacik.png" alt="vtacik" class="border-primary">
+                        <img src="img/ftacik.png" alt="vtacik" class="border-secondary">
+                        <img src="img/ftacik.png" alt="vtacik" class="border-success">
+                        <img src="img/ftacik.png" alt="vtacik" class="border-danger"></td>
+                </tr>
+                <tr>
+                    <td><code>.rounded<br>.rounded-top<br>rounded.right/left/bottom<br>.rounded-circle</code></td>
+                    <td>zagulati rohy/ cely obrazok</td>
+                    <td><img src="img/ftacik.png" alt="vtacik" style="background-color: #60717d" class="rounded">
+                        <img src="img/ftacik.png" alt="vtacik" style="background-color: #60717d" class="rounded-bottom">
+                        <img src="img/ftacik.png" alt="vtacik" style="background-color: #60717d" class="rounded-0">
+                        <img src="img/ftacik.png" alt="vtacik" style="background-color: #60717d" class="rounded-circle"></td>
+                </tr>
+                <tr>
+                    <td><code>.img-thumbnail</code></td>
+                    <td>tuto triedu pouzijeme pre miniatury</td>
+                    <td><img src="img/ftacik.png" alt="vtacik" style="background-color: #60717d" class="img-thumbnail"></td>
+                </tr>
+                <tr>
+                    <td><code>.float-left<br>.float-right<br>.float-none</code></td>
+                    <td>nastavi plavajuci obsah (obtekany) vlavo/vpravo/vobec</td>
+                    <td><img src="img/ftacik.png" alt="vtacik" class="float-start">
+                        tieto dva obrazky su obtekane
+                        <img src="img/ftacik.png" alt="vtacik" class="float-end"></td>
+                </tr>
+                <tr>
+                    <td><code>.text-left<br>.text-right<br>.text-center</code></td>
+                    <td>vycentruje obrazok rovnako ako text</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>.mx-auto</code></td>
+                    <td>nastavi margin: 0 auto; a teda vycentruje obrazok dostredu</td>
+                    <td><img src="img/ftacik.png" alt="vtacik" style="width: 100px" class="img-fluid ;mx-auto"></td>
+                </tr>
+            </table>
+            <h2>Grid system</h2>
+            <table class="table-bootstrap">
+                <tr>
+                    <th style="width: 250px; text-align:center">Bootstrap trieda</th>
+                    <th style="width: 500px">popis</th>
+                    <th>ukazka</th>
+                </tr>
+                <tr>
+                    <td><code>.col-1 az .col-12</code></td>
+                    <td>nastavuje sirku elementu od 0-12</td>
+                    <td style="margin: 0; padding: 0">
+                        <div class="container-fluid">
+                            <div class="row text-center">
+                                <div class="col-3 bg-success text-bg-danger">col-3</div>
+                                <div class="col-3 bg-danger">col-3</div>
+                                <div class="col-6 bg-warning">col-6</div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.col-sm-1/12</code></td>
+                    <td colspan="2">
+                        <div class="container-fluid">
+                            <div class="row text-center">
+                                <div class="col-sm-3 bg-success text-bg-danger">col-sm-3</div>
+                                <div class="col-sm-3 bg-danger">col-sm-3</div>
+                                <div class="col-sm-6 bg-warning">col-sm-6</div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.col-md-1/12</code></td>
+                    <td colspan="2">
+                        <div class="container-fluid">
+                            <div class="row text-center">
+                                <div class="col-md-3 bg-success text-bg-danger">col-md-3</div>
+                                <div class="col-md-3 bg-danger">col-md-3</div>
+                                <div class="col-md-6 bg-warning">col-md-6</div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.col-lg-1/12</code></td>
+                    <td colspan="2">
+                        <div class="container-fluid">
+                            <div class="row text-center">
+                                <div class="col-lg-3 bg-success text-bg-danger">col-lg-3</div>
+                                <div class="col-lg-3 bg-danger">col-lg-3</div>
+                                <div class="col-lg-6 bg-warning">col-lg-6</div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.col-xl-1/12</code></td>
+                    <td colspan="2">
+                        <div class="container-fluid">
+                            <div class="row text-center">
+                                <div class="col-xl-3 bg-success text-bg-danger">col-xl-3</div>
+                                <div class="col-xl-3 bg-danger">col-xl-3</div>
+                                <div class="col-xl-6 bg-warning">col-xl-6</div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.no-gutters</code></td>
+                    <td>odstrani padding vo vnutri v stlpcoch </td>
+                    <td>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12 bg-danger" style="padding: 0">tento .col-12 je bez vnutorneho paddingu</div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.order-1/12</code></td>
+                    <td>mozeme zamenit poradie stlpcov na stranke bezokhladu na jeho poziciu v kode</td>
+                    <td>
+                        <div class="container-fluid">
+                            <div class="row text-center">
+                                <div class="col-3 bg-success order-2">order-2</div>
+                                <div class="col-3 bg-danger order-0">order-0</div>
+                                <div class="col-6 bg-warning order-1">order-1</div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.offset-1/12</code></td>
+                    <td>offset pouzijeme ak chceme vynechat nejaky stlpec (nemusime ho deklarovat)</td>
+                    <td>
+                        <div class="container-fluid">
+                            <div class="row text-center">
+                                <div class="col-3 bg-success text-bg-danger">col-3</div>
+                                <div class="col-6 offset-3 bg-warning">col-6 offset-3</div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <h2>Tabulky</h2>
+            <table class="table-bootstrap">
+                <tr>
+                    <th style="width: 250px; text-align:center">Bootstrap trieda</th>
+                    <th style="width: 500px">popis</th>
+                    <th>ukazka</th>
+                </tr>
+                <tr>
+                    <td><code>.table</code></td>
+                    <td>prida tabulke vodorovne ciary k oddeleniu riadkov</td>
+                    <td>
+                        <table class="table" style="padding: 0; color: white">
+                            <tr>
+                                <td>prvy riadok</td>
+                            </tr>
+                            <tr>
+                                <td>druhy riadok</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.table-light<br>.table-dark</code></td>
+                    <td>zmeni farbu riadka v tabulke</td>
+                    <td>
+                        <table class="table" style="padding: 0; color: white">
+                            <thead class="table-light">
+                                <tr>
+                                    <td>svetly riadok tabulky</td>
+                                </tr>
+                            </thead>
+                            <thead class="table-dark">
+                                <tr>
+                                    <td>tmavy riadok tabulky</td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>riadok bez upravy</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.table-stripped</code></td>
+                    <td>pruhovane riadky tabulky</td>
+                    <td>
+                        <table class="table-striped">
+                            <tr>
+                                <td>prvy riadok</td>
+                            </tr>
+                            <tr>
+                                <td>druhy riadok</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.table-bordered</code></td>
+                    <td>prida oramovanie tabulke</td>
+                    <td>
+                        <table style="border: 2px solid white">
+                            <tr>
+                                <td style="border: 2px solid white">prvy riadok</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 2px solid white">druhy riadok</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.table-hover</code></td>
+                    <td>po nabehnuti kurzora na riadok v tabulke zvyrazni riadok</td>
+                    <td>
+                        <table class="table table-light table-hover">
+                            <tr>
+                                <td>prvy riadok</td>
+                            </tr>
+                            <tr>
+                                <td>druhy riadok</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.table-sm</code></td>
+                    <td>zrusi padding v tabulke</td>
+                    <td>
+                        <table class="table-sm">
+                            <tr>
+                                <td>prvy riadok</td>
+                            </tr>
+                            <tr>
+                                <td>druhy riadok</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.table-[farba]</code></td>
+                    <td>zmani farbu riadku v tabulke</td>
+                    <td>
+                        <table class="table" style="color: white">
+                            <tr>
+                                <td class="table-primary">.table-primary</td>
+                            </tr>
+                            <tr>
+                                <td class="table-secondary">.table-secondary</td>
+                            </tr>
+                            <tr>
+                                <td class="table-success">.table-success</td>
+                            </tr>
+                            <tr>
+                                <td class="table-danger">.table-danger</td>
+                            </tr>
+                            <tr>
+                                <td class="table-warning">.table-warning</td>
+                            </tr>
+                            <tr>
+                                <td class="table-light">.table-light</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.table-responsive-sm/md/lg</code></td>
+                    <td>pri malych zadiadeniach prida scrollbar do tabulky cim sa stane tabulka responivna</td>
+                    <td>
+                        <table class="table-responsive-xxl">
+                            <tr>
+                                <td>prve data</td>
+                                <td>druhe data</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <h2>Tlacitka</h2>
+            <table class="table-bootstrap">
+                <tr>
+                    <th style="width: 250px; text-align:center">Bootstrap trieda</th>
+                    <th style="width: 500px">popis</th>
+                    <th>ukazka</th>
+                </tr>
+                <tr>
+                    <td><code>.btn-[farba]</code></td>
+                    <td>mozeme nastylovat <code>&lt;button&gt; &lt;a&gt; &lt;input&gt;</code> ktore plnia fukciu tlacitka</td>
+                    <td>
+                        <button type="button" class="btn btn-primary">.btn-primary</button>
+                        <button type="button" class="btn btn-secondary">.btn-secondary</button>
+                        <button type="button" class="btn btn-success">.btn-success</button>
+                        <button type="button" class="btn btn-danger">.btn-danger</button>
+                        <button type="button" class="btn btn-warning">.btn-warning</button>
+                        <button type="button" class="btn btn-info">.btn-info</button>
+                        <button type="button" class="btn btn-light">.btn-light</button>
+                        <button type="button" class="btn btn-dark">.btn-dark</button>
+                        <button type="button" class="btn btn-link">.btn-link</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.btt-outline-[farba]</code></td>
+                    <td>ine nastylovanie <code>&lt;button&gt;</code> tlacitka</td>
+                    <td>
+                        <button type="button" class="btn btn-outline-primary">.btn-outline-primary</button>
+                        <button type="button" class="btn btn-outline-secondary">.btn-outline-secondary</button>
+                        <button type="button" class="btn btn-outline-success">.btn-outline-success</button>
+                        <button type="button" class="btn btn-outline-danger">.btn-outline-danger</button>
+                        <button type="button" class="btn btn-outline-warning">.btn-outline-warning</button>
+                        <button type="button" class="btn btn-outline-info">.btn-outline-info</button>
+                        <button type="button" class="btn btn-outline-light">.btn-outline-light</button>
+                        <button type="button" class="btn btn-outline-dark">.btn-outline-dark</button>
+                        <button type="button" class="btn btn-outline-link">.btn-outline-link</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.btn-lg<br>.btn-sm<br>.btn-block</code></td>
+                    <td>definuje dolezitost tlacitka - zmeni jeho velkost</td>
+                    <td>
+                        <button type="button" class="btn btn-outline-primary btn-lg">.btn-lg</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm">.btn-sm</button>
+                        <button type="button" class="btn btn-outline-danger btn-block" style="width: 100%">.btn-block</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.active</code></td>
+                    <td>vykresli neaktivne tlacitko ako aktivne</td>
+                    <td><button type="button" class="btn btn-primary btn-lg active">.active</button></td>
+                </tr>
+                <tr>
+                    <td><code>.disabled</code></td>
+                    <td>tlacitko bude vzdy zobrazene ako neaktivne (neda sa nan ani kliknut)</td>
+                    <td><button type="button" class="btn btn-outline-secondary btn-lg disabled">.btn-sm</button></td>
+                </tr>
+                <tr>
+                    <td><code>.btn-group</code></td>
+                    <td>teto trieda sa prida do <code>&lt;div&gt; elementu do ktorej sa vlozi viacero tlacitok cim sa spoja</code></td>
+                    <td>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-primary">.btn-outline-primary</button>
+                            <button type="button" class="btn btn-outline-secondary">.btn-outline-secondary</button>
+                            <button type="button" class="btn btn-outline-success">.btn-outline-success</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.btn-group-vertical</code></td>
+                    <td>vytvori skupinu buttonov ale vo vertikale</td>
+                    <td>
+                        <div class="btn-group-vertical">
+                            <button type="button" class="btn btn-outline-primary">.btn-outline-primary</button>
+                            <button type="button" class="btn btn-outline-secondary">.btn-outline-secondary</button>
+                            <button type="button" class="btn btn-outline-success">.btn-outline-success</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <h2>formulare</h2>
+            <table class="table-bootstrap">
+                <tr>
+                    <th style="width: 250px; text-align:center">Bootstrap trieda</th>
+                    <th style="width: 500px">popis</th>
+                    <th>ukazka</th>
+                </tr>
+                <tr>
+                    <td><code>.form-control</code></td>
+                    <td>upravi vzhlad kolonky pre input (kolonka bude taktiez responzivna)</td>
+                    <td>
+                        <form>
+                            <div>
+                                <label for="prihlasenie">Email</label>
+                                <input type="email" class="form-control" id="prihlasenie">
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.form-text</code></td>
+                    <td>pouziva sa k doplneniu informacii pod kolonku vo formulari. Pouziva sa v tagu <code>&lt;small&gt;</code></td>
+                    <td>
+                        <label for="heslo">Heslo</label>
+                        <input type="password" class="form-control" id="heslo">
+                        <small class="form-text">toto je napoveda k heslu</small>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.form-check<br>.form-check-label<br>.form-check-input</code></td>
+                    <td>tato treida sa vyuziva u checkboxov a pise sa do divu. Cely checkbox potom vkladame aj
+                        s popisom do <code>&lt;label&gt;</code> aby bolo mozne zakliknut aj text</td>
+                    <td>
+                        <form>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" value="">
+                                    suhlasim s obchodnymi podmeinkami
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="platebni-metoda" id="platebni-metoda1" value="kartou" checked>
+                                    Platba kartou
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="platebni-metoda" id="platebni-metoda2" value="prevodem" checked>
+                                    Platba prevodom
+                                </label>
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.form-check-inline</code></td>
+                    <td>zaradi checkboxy zasebou a nie pod seba</td>
+                    <td>
+                        <form>
+                            <div class="form-check form-check-inline">
+                                <label for="platba-kartou">
+                                    <input class="form-check-input" type="radio" id="platba-kartou">
+                                    platba kartou
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label for="platba-prevodom">
+                                    <input class="form-check-input" type="radio" id="platba-prevodom">
+                                    platba prevodom
+                                </label>
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>.was-validated</code></td>
+                    <td>klientska validacia - vpriapde nevalidneho vstupu nam prehliadac vyhodi chybove hlasenie este pred
+                    tym nez sa formular odosle na serverovu validaciu</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <p id="right-bootom-text">Bootstrap</p>
+</section>
+
+</body>
+
+</html>

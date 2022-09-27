@@ -1,0 +1,16 @@
+@font-face {
+  font-family: Lobster;
+  src: url("fonts/lobster/Lobster-Regular.ttf");
+}
+@font-face {
+  font-family: Oswald;
+  src: url("fonts/oswald/Oswald-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: Poppins;
+  src: url("fonts/poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: League Script;
+  src: url("fonts/league/LeagueScript-Regular.ttf");
+}

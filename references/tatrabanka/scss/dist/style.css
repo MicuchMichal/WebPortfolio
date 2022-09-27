@@ -1,0 +1,703 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #1d1e23;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  background: black;
+  color: white;
+  height: 50px;
+  text-decoration: none;
+  font-size: 1.15em;
+}
+.navbar .navbarContainer {
+  display: block;
+  position: relative;
+  height: 50px;
+}
+.navbar .navbarContainer input[type=checkbox] {
+  display: block;
+}
+.navbar .navbarContainer input[type=checkbox]:checked ~ .navigation {
+  transform: translateX(0);
+}
+.navbar .navbarContainer input[type=checkbox] {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  width: 50px;
+  z-index: 1;
+  opacity: 0;
+}
+.navbar .navbarContainer input[type=checkbox]:hover {
+  cursor: pointer;
+}
+.navbar .navbarContainer .hamburgerMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  height: 14px;
+  width: 16px;
+  top: 18px;
+  left: 16px;
+}
+.navbar .navbarContainer .hamburgerMenu .line {
+  height: 2px;
+  width: 100%;
+  background: #0080ec;
+}
+.navbar .navbarContainer .navbarLogo {
+  display: block;
+  position: absolute;
+  left: 45%;
+  top: 7px;
+  width: 40px;
+  height: 40px;
+  background: url("/references/tatrabanka/img/logoTatrabanka.png") center no-repeat;
+  background-size: 40px;
+}
+.navbar .navbarContainer .navbarSearch {
+  display: block;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 22px;
+  height: 22px;
+  background: url("/references/tatrabanka/img/search.png") center no-repeat;
+  background-size: 22px;
+}
+.navbar .navbarContainer .navigation {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 256px;
+  padding-top: 14px;
+  background: #000;
+  transform: translate(-150%);
+  overflow-y: scroll;
+}
+.navbar .navbarContainer .navigation .internetBankingList {
+  margin-bottom: 8px;
+}
+.navbar .navbarContainer .navigation .hiddenLinks ul {
+  background: white;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+.navbar .navbarContainer .navigation .hiddenLinks ul li {
+  height: 44px;
+  font-size: 0.7em;
+}
+.navbar .navbarContainer .navigation .hiddenLinks ul li:first-child a {
+  cursor: default;
+  color: black;
+}
+.navbar .navbarContainer .navigation .hiddenLinks ul li a {
+  display: block;
+  color: #0097fd;
+  padding: 16px 0 16px 12px;
+}
+.navbar .navbarContainer .navigation .hiddenLinks:hover {
+  position: relative;
+  height: 50%;
+}
+.navbar .navbarContainer .navigation .hiddenLinks:hover ul {
+  display: block;
+}
+.navbar .navbarContainer .navigation li {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+  height: 48px;
+}
+.navbar .navbarContainer .navigation li:first-child {
+  margin-bottom: 20px;
+}
+.navbar .navbarContainer .navigation li .internetBanking {
+  position: relative;
+  display: block;
+  background: #0080ec;
+  color: white;
+  font-weight: 700;
+  margin: 0 6px;
+  padding: 18px 0;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 0.6em;
+  text-shadow: 0 0 5px white;
+}
+.navbar .navbarContainer .navigation li .internetBanking:hover {
+  background: #0369c0;
+  color: #cfcfcf;
+}
+.navbar .navbarContainer .navigation li .sideLinks {
+  display: none;
+}
+.navbar .navbarContainer .navigation li .navigationLinks {
+  display: block;
+  position: relative;
+  font-size: 0.6em;
+  color: #cfcfcf;
+  padding: 18px 0 18px 6px;
+}
+
+header {
+  display: none;
+}
+
+section div {
+  display: flex;
+  flex-direction: column;
+}
+section .topContainterForPaddingTop {
+  width: 100%;
+  height: 160px;
+  background: #000;
+}
+section .pageContent {
+  padding-top: 140px;
+}
+section .pageContent div {
+  padding: 0 30px 0px 30px;
+}
+section .pageContent div a {
+  display: block;
+  color: white;
+}
+section .pageContent div a img {
+  width: 270px;
+  height: 180px;
+}
+section .pageContent div a:first-child {
+  width: 270px;
+  height: 180px;
+  margin-bottom: 40px;
+}
+section .pageContent div a:nth-child(2) {
+  width: fit-content;
+  font-size: 1.1em;
+  margin-bottom: 12px;
+}
+section .pageContent div a:nth-child(4) {
+  background: #0080ec;
+  width: fit-content;
+  color: white;
+  font-weight: 500;
+  padding: 16px 40px;
+  text-align: center;
+  border-radius: 2px;
+  margin-bottom: 70px;
+}
+section .pageContent div a:nth-child(4):hover {
+  background: #0369c0;
+  color: #cfcfcf;
+}
+section .pageContent div p {
+  color: #808080;
+  font-size: 0.8em;
+  margin-bottom: 60px;
+}
+section .markets {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+section .markets div {
+  background: black;
+  margin: 0 20px 20px 20px;
+  color: white;
+  padding: 10px 20px;
+}
+section .markets .infotable {
+  margin-bottom: 70px;
+}
+section .markets .infotable h3 {
+  font-weight: 100;
+  font-size: 1em;
+}
+section .markets .infotable p {
+  color: #b3b3b3;
+  font-size: 0.8em;
+}
+section .markets .infotable a {
+  display: block;
+  background: #1d1e23;
+  color: #ededee;
+  width: fit-content;
+  padding: 10px 20px;
+  font-size: 0.9em;
+  margin-top: 5%;
+  margin-bottom: 40px;
+  border-radius: 3px;
+}
+section .markets .infotable a:hover {
+  background: #1a1b1f;
+  color: #bcbcbd;
+}
+section .markets .exchangeRate h3 {
+  font-weight: 100;
+  font-size: 1.1em;
+  margin-bottom: 25px;
+}
+section .markets .exchangeRate p {
+  color: #b3b3b3;
+  padding: 0;
+  margin: 7px 0;
+  font-size: 1.05em;
+  line-height: 1.3em;
+}
+section .markets .exchangeRate p img {
+  width: 18px;
+  margin-right: 10px;
+}
+section .markets .exchangeRate p span {
+  position: absolute;
+  right: 60px;
+}
+section .markets .exchangeRate p span img {
+  margin-left: 5px;
+  width: 17px;
+}
+section .markets .exchangeRate a {
+  display: block;
+  background: #1d1e23;
+  color: #ededee;
+  width: fit-content;
+  padding: 10px 20px;
+  font-size: 0.9em;
+  margin-top: 3%;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+section .markets .exchangeRate a:hover {
+  background: #1a1b1f;
+  color: #bcbcbd;
+}
+section .markets .findUs h3 {
+  font-weight: 100;
+  font-size: 1.15em;
+  margin-bottom: 25px;
+}
+section .markets .findUs form {
+  display: flex;
+  flex-direction: column;
+}
+section .markets .findUs form select {
+  background: black;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid #4b4b4b;
+  margin-bottom: 10px;
+}
+section .markets .findUs form select option {
+  color: #808080;
+  background: white;
+  padding: 10px 0;
+}
+section .markets .findUs form .inputAdress {
+  background: black;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid #4b4b4b;
+  margin-bottom: 15px;
+}
+section .markets .findUs form .inputSearch {
+  display: block;
+  background: #1d1e23;
+  color: #ededee;
+  width: fit-content;
+  padding: 10px 20px;
+  font-size: 0.9em;
+  margin-top: 3%;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+section .markets .findUs form .inputSearch:hover {
+  background: #1a1b1f;
+  color: #bcbcbd;
+}
+section .blog {
+  width: 100%;
+  background: white;
+}
+section .blog h2 {
+  font-weight: 100;
+  margin: 40px 0 20px 20px;
+}
+section .blog h3 {
+  margin-left: 20px;
+  font-weight: 100;
+  font-size: 0.95em;
+  color: #4b4b4b;
+  margin-bottom: 60px;
+}
+section .blog div {
+  display: block;
+}
+section .blog div a {
+  display: block;
+  margin: 0 20px 30px 20px;
+}
+section .blog div a:hover h4 {
+  color: #000;
+}
+section .blog div a img {
+  display: block;
+  width: 100%;
+}
+section .blog div a p {
+  color: #b3b3b3;
+  font-size: 0.7em;
+}
+section .blog div a h4 {
+  font-size: 1.3em;
+  font-weight: 100;
+  color: #0097fd;
+  margin: 0;
+}
+section .blog button {
+  background: #5d6070;
+  display: block;
+  width: fit-content;
+  margin: auto;
+  padding: 10px;
+  color: white;
+  border-radius: 3px;
+  margin-bottom: 40px;
+}
+section .blog button:hover {
+  background: #7d808d;
+}
+
+footer {
+  background: #0d0d0d;
+}
+footer div {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+footer div button {
+  text-transform: uppercase;
+  text-align: left;
+  background: #0d0d0d;
+  color: white;
+  padding: 20px;
+  border-bottom: 1px solid #1d1e23;
+}
+footer div button img {
+  float: right;
+}
+
+@media screen and (min-width: 769px) {
+  .navbar {
+    display: none;
+  }
+
+  header {
+    background: #000;
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 130px;
+  }
+  header nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+  header nav .bigLogo {
+    margin: 22px 10px 0 10px;
+  }
+  header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    width: 100%;
+  }
+  header nav ul li {
+    font-size: 1.2em;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    margin: 50px 25px 0 0;
+  }
+  header nav ul li a {
+    color: #cecece;
+    height: 100%;
+    word-wrap: none;
+    font-size: 0.7em;
+    transition: color 0.3s;
+    font-weight: 500;
+  }
+  header nav ul li a:hover {
+    color: white;
+    border-bottom: 4px solid #0097fd;
+  }
+  header nav .searchButton {
+    position: absolute;
+    right: 10px;
+    top: 46px;
+    width: 22px;
+    height: 22px;
+    background: url("/references/tatrabanka/img/search.png") center no-repeat;
+    background-size: 22px;
+  }
+  header nav .internetBankingButton {
+    display: none;
+  }
+  header nav .beClient {
+    display: none;
+  }
+
+  section .pageContent {
+    flex-direction: row;
+    padding-top: 65px;
+  }
+  section .pageContent div {
+    width: 25%;
+    margin: 0 10px;
+    padding: 0;
+  }
+  section .pageContent div a img {
+    display: block;
+    height: 14vw;
+    width: 100%;
+  }
+  section .pageContent div a:first-child {
+    width: 100%;
+    height: 14vw;
+    margin-bottom: 35px;
+  }
+  section .pageContent div a:nth-child(2) {
+    font-size: 1em;
+  }
+  section .pageContent div a:nth-child(4) {
+    font-weight: 500;
+    padding: 12px 10px;
+  }
+  section .pageContent div p {
+    color: #808080;
+    font-size: 0.9em;
+    line-height: 1.6em;
+    margin-bottom: 60px;
+  }
+  section .markets {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  section .markets div {
+    width: 44%;
+  }
+  section .markets .infotable {
+    margin-right: 20px;
+    height: 350px;
+  }
+  section .markets .infotable h3 {
+    font-size: 1.2em;
+  }
+  section .markets .infotable p {
+    font-size: 0.85em;
+    line-height: 1.2em;
+    margin-bottom: 110px;
+    letter-spacing: 0.03em;
+  }
+  section .markets .exchangeRate {
+    height: 350px;
+  }
+  section .markets .exchangeRate h3 {
+    font-size: 1.2em;
+  }
+  section .markets .exchangeRate p span {
+    right: calc(30px + 5%);
+  }
+  section .markets .exchangeRate a {
+    margin-top: 70px;
+    margin-bottom: 0;
+  }
+  section .markets .findUs {
+    height: 350px;
+  }
+  section .markets .findUs form .inputSearch {
+    margin-top: 60px;
+  }
+  section .blog {
+    padding-top: 50px;
+  }
+  section .blog h2 {
+    font-size: 1.8em;
+  }
+  section .blog h3 {
+    font-size: 1.05em;
+  }
+  section .blog div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  section .blog div a {
+    width: 44%;
+  }
+  section .blog div a img {
+    margin-bottom: 20px;
+  }
+  section .blog div a p {
+    font-size: 0.8em;
+    margin-bottom: 20px;
+  }
+  section .blog div a h4 {
+    margin-bottom: 50px;
+  }
+  section .blog button {
+    margin-bottom: 100px;
+  }
+}
+@media screen and (min-width: 911px) {
+  header nav ul li {
+    font-size: 1.4em;
+  }
+}
+@media screen and (min-width: 1366px) {
+  header {
+    height: 90px;
+  }
+  header nav .bigLogo {
+    margin: 10px 60px 0 50px;
+  }
+  header nav .bigLogo a img {
+    width: 70px;
+  }
+  header nav ul li {
+    margin: 35px 35px 0 0;
+    font-size: 1.5em;
+  }
+  header nav .searchButton {
+    top: 34px;
+    right: 300px;
+  }
+  header nav .internetBankingButton {
+    display: block;
+    position: absolute;
+    background: #0080ec;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+    right: 60px;
+    top: 22px;
+    padding: 13px 0;
+    border-radius: 3px;
+    width: 190px;
+  }
+  header nav .internetBankingButton:hover {
+    background: #027bcc;
+    color: #cecece;
+  }
+
+  section .pageContent {
+    padding-top: 120px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  section .pageContent div {
+    width: 280px;
+  }
+  section .pageContent div a img {
+    height: 193px;
+    width: 280px;
+  }
+  section .pageContent div a:first-child {
+    height: 193px;
+    width: 280px;
+    margin-bottom: 30px;
+  }
+  section .pageContent div a:nth-child(2) {
+    font-size: 1.3em;
+  }
+  section .pageContent div a:nth-child(4) {
+    padding: 12px 0;
+    width: 50%;
+  }
+  section .pageContent div p {
+    color: #808080;
+    font-size: 1em;
+    line-height: 1.6em;
+    margin-bottom: 60px;
+  }
+  section .markets {
+    justify-content: center;
+  }
+  section .markets div {
+    width: 22%;
+  }
+  section .markets .infotable h3 {
+    font-size: 1.4em;
+  }
+  section .markets .infotable p {
+    font-size: 0.9em;
+    line-height: 1.5em;
+  }
+  section .markets .exchangeRate h3 {
+    font-size: 1.4em;
+  }
+  section .markets .exchangeRate p span {
+    left: calc(55%);
+  }
+  section .blog h2 {
+    font-size: 2.8em;
+  }
+  section .blog h3 {
+    font-size: 1.2em;
+  }
+  section .blog div {
+    margin: auto;
+    width: 1300px;
+    justify-content: center;
+  }
+  section .blog div a {
+    width: 370px;
+  }
+  section .blog div a img {
+    width: 370px;
+    height: 160px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  header nav .beClient {
+    display: block;
+    position: absolute;
+    color: white;
+    text-align: center;
+    border: 1px solid #0080ec;
+    border-radius: 3px;
+    padding: 12px 0;
+    width: 140px;
+    top: 22px;
+    right: 265px;
+    transition: background 0.1s;
+  }
+  header nav .beClient:hover {
+    background: #027bcc;
+    color: #cecece;
+  }
+  header nav .searchButton {
+    right: 440px;
+  }
+}

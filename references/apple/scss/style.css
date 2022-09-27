@@ -1,0 +1,841 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 337px;
+  overflow-x: scroll;
+}
+
+header {
+  background: #313132;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+}
+@media screen and (max-width: 833px) {
+  header {
+    height: 48px;
+  }
+}
+@media screen and (min-width: 834px) {
+  header {
+    height: 44px;
+  }
+}
+header .burgerMenu {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 833px) {
+  header .burgerMenu {
+    height: 100%;
+    width: 38px;
+  }
+}
+@media screen and (min-width: 834px) {
+  header .burgerMenu {
+    display: none;
+  }
+}
+header .burgerMenu .line {
+  width: 14px;
+  height: 1px;
+  background: rgb(209, 209, 209);
+  margin: 2px;
+}
+header .burgerMenu:hover .line {
+  background: white;
+  transition: 0.55s;
+}
+header .soloAppleLogo {
+  position: absolute;
+  left: 48%;
+  top: 0px;
+  width: 50px;
+  height: 100%;
+  padding: 10px;
+  background: url("img/appleNavLogo.png") no-repeat;
+  background-position: center;
+  background-size: 30px;
+}
+@media screen and (min-width: 834px) {
+  header .soloAppleLogo {
+    display: none;
+  }
+}
+header .soloAppleLogo:hover {
+  background: url("img/appleNavLogoHover.png") no-repeat;
+  background-position: center;
+  background-size: 30px;
+  transition: 0.55s;
+}
+header .classicMenu {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  list-style: none;
+  padding-right: 32px;
+}
+@media screen and (max-width: 833px) {
+  header .classicMenu {
+    display: none;
+  }
+}
+@media screen and (min-width: 834px) {
+  header .classicMenu {
+    width: 1046px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1046px) {
+  header .classicMenu {
+    width: 100%;
+  }
+}
+header .classicMenu li {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .classicMenu li a {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(209, 209, 209);
+  font-weight: 200;
+  font-size: 0.75em;
+  padding: 0px 10px 0px 10px;
+}
+header .classicMenu li a:hover {
+  color: white;
+  transition: 0.55s;
+}
+header .classicMenu .appleNavLogo {
+  background: url("img/appleNavLogo.png") no-repeat;
+  background-position: center;
+  background-size: 25px;
+}
+header .classicMenu .appleNavLogo:hover {
+  background: url("img/appleNavLogoHover.png") no-repeat;
+  background-position: center;
+  background-size: 25px;
+  transition: 0.55s;
+}
+header .classicMenu .magnifierLogo {
+  background: url("img/searchMagnifier.png") no-repeat;
+  background-position: center;
+  background-size: 22px;
+}
+header .classicMenu .magnifierLogo:hover {
+  background: url("img/searchMagnifierHover.png") no-repeat;
+  background-position: center;
+  background-size: 22px;
+  transition: 0.55s;
+}
+
+@media screen and (max-width: 833px) {
+  section {
+    padding-top: 48px;
+  }
+}
+@media screen and (min-width: 834px) {
+  section {
+    padding-top: 44px;
+  }
+}
+section .unicefSupport {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+@media screen and (max-width: 734px) {
+  section .unicefSupport {
+    height: 102px;
+    flex-direction: column;
+  }
+  section .unicefSupport a {
+    width: 250px;
+    text-align: center;
+    padding-top: 3px;
+  }
+  section .unicefSupport img {
+    width: 106px;
+  }
+}
+@media screen and (min-width: 735px) {
+  section .unicefSupport {
+    height: 70px;
+    flex-direction: row;
+  }
+  section .unicefSupport a {
+    padding-left: 15px;
+  }
+  section .unicefSupport img {
+    width: 122px;
+  }
+}
+section .unicefSupport a {
+  color: #0066cc;
+  font-size: 0.95em;
+  text-decoration: none;
+}
+section .unicefSupport a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+section .topProducts {
+  display: flex;
+  flex-direction: column;
+}
+section .topProducts .macBookAirContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 28px;
+  text-decoration: none;
+}
+@media screen and (max-width: 734px) {
+  section .topProducts .macBookAirContainer {
+    background: url("img/macbookAirSmall.png") center;
+    height: 531px;
+  }
+}
+@media screen and (min-width: 735px) {
+  section .topProducts .macBookAirContainer {
+    background: url("img/macbookAirMedium.png") center;
+    height: 672px;
+  }
+}
+@media screen and (min-width: 1069px) {
+  section .topProducts .macBookAirContainer {
+    background: url("img/macbookAirLarge.png") center;
+    height: 652px;
+  }
+}
+section .topProducts .macBookAirContainer h1 {
+  color: black;
+  font-size: 2em;
+}
+section .topProducts .macBookAirContainer img {
+  width: 270px;
+  margin-bottom: 8px;
+}
+section .topProducts .macBookAirContainer p {
+  font-size: 1.1em;
+}
+section .topProducts .macBookAirContainer p:hover {
+  text-decoration: underline;
+}
+@media screen and (min-width: 735px) {
+  section .topProducts .macBookAirContainer h1 {
+    font-size: 3em;
+    margin-top: 28px;
+  }
+  section .topProducts .macBookAirContainer img {
+    width: 300px;
+    margin: 8px 0 8px 0;
+  }
+}
+@media screen and (min-width: 1069px) {
+  section .topProducts .macBookAirContainer h1 {
+    font-size: 3.6em;
+    letter-spacing: -0.05em;
+    position: relative;
+    top: 168px;
+    right: 240px;
+  }
+  section .topProducts .macBookAirContainer img {
+    width: 362px;
+    margin: 0 0 12px 0;
+    position: relative;
+    top: 168px;
+    right: 240px;
+  }
+  section .topProducts .macBookAirContainer p {
+    position: relative;
+    top: 168px;
+    right: 240px;
+    font-size: 1.25em;
+  }
+}
+section .topProducts .macBookProContainter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 30px;
+  text-decoration: none;
+}
+@media screen and (max-width: 734px) {
+  section .topProducts .macBookProContainter {
+    background: url("img/macbookProSmall.jpg") center;
+    height: 500px;
+  }
+}
+@media screen and (min-width: 735px) {
+  section .topProducts .macBookProContainter {
+    background: url("img/macbookProMedium.jpg") center;
+    height: 650px;
+  }
+}
+@media screen and (min-width: 1069px) {
+  section .topProducts .macBookProContainter {
+    background: url("img/macbookProLarge.jpg") center;
+    height: 692px;
+  }
+}
+section .topProducts .macBookProContainter h1 {
+  color: white;
+  font-size: 2em;
+  margin: 0;
+}
+section .topProducts .macBookProContainter img {
+  width: 200px;
+}
+section .topProducts .macBookProContainter p {
+  font-size: 1.1em;
+}
+section .topProducts .macBookProContainter p:hover {
+  text-decoration: underline;
+}
+@media screen and (min-width: 735px) {
+  section .topProducts .macBookProContainter h1 {
+    font-size: 3em;
+    margin-top: 28px;
+  }
+  section .topProducts .macBookProContainter img {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 1069px) {
+  section .topProducts .macBookProContainter h1 {
+    font-size: 3.6em;
+    margin-top: 18px;
+  }
+  section .topProducts .macBookProContainter p {
+    font-size: 1.3em;
+  }
+}
+section .topProducts .iPhoneContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 30px;
+  text-decoration: none;
+}
+@media screen and (max-width: 734px) {
+  section .topProducts .iPhoneContainer {
+    background: url("img/iphoneSmall.jpg") center;
+    height: 500px;
+  }
+}
+@media screen and (min-width: 735px) {
+  section .topProducts .iPhoneContainer {
+    background: url("img/iphoneMedium.jpg") center;
+    height: 650px;
+  }
+}
+@media screen and (min-width: 1069px) {
+  section .topProducts .iPhoneContainer {
+    background: url("img/iphoneLarge.jpg") center;
+    height: 692px;
+  }
+}
+section .topProducts .iPhoneContainer h1 {
+  color: rgb(0, 0, 0);
+  font-size: 2em;
+  margin: 0;
+}
+section .topProducts .iPhoneContainer h2 {
+  color: black;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+section .topProducts .iPhoneContainer p {
+  font-size: 1.1em;
+}
+section .topProducts .iPhoneContainer p:hover {
+  text-decoration: underline;
+}
+@media screen and (min-width: 735px) {
+  section .topProducts .iPhoneContainer h1 {
+    font-size: 3em;
+    margin-top: 28px;
+  }
+  section .topProducts .iPhoneContainer h2 {
+    font-size: 1.6em;
+  }
+  section .topProducts .iPhoneContainer p {
+    font-size: 1.2em;
+  }
+}
+@media screen and (min-width: 1069px) {
+  section .topProducts .iPhoneContainer h1 {
+    font-size: 3.6em;
+    margin-top: 18px;
+  }
+  section .topProducts .iPhoneContainer h2 {
+    font-size: 1.75em;
+  }
+  section .topProducts .iPhoneContainer p {
+    font-size: 1.3em;
+  }
+}
+section .bottomProducts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+section .bottomProducts .ipadAirContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 50px;
+  text-decoration: none;
+}
+@media screen and (max-width: 734px) {
+  section .bottomProducts .ipadAirContainer {
+    background: url("img/ipadairSmall.jpg") center bottom;
+    height: 500px;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+}
+@media screen and (min-width: 735px) {
+  section .bottomProducts .ipadAirContainer {
+    background: url("img/ipadairMedium.jpg") center;
+    height: 489px;
+    margin: 0px 6px 12px 12px;
+    width: 47.5%;
+  }
+}
+@media screen and (min-width: 1069px) {
+  section .bottomProducts .ipadAirContainer {
+    background: url("img/ipadairLarge.jpg") center;
+    height: 580px;
+    margin: 0px 6px 12px 12px;
+    width: 47.5%;
+  }
+}
+section .bottomProducts .ipadAirContainer h2 {
+  color: white;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+section .bottomProducts .ipadAirContainer p {
+  font-size: 1.1em;
+}
+section .bottomProducts .ipadAirContainer p:hover {
+  text-decoration: underline;
+}
+@media screen and (min-width: 1069px) {
+  section .bottomProducts .ipadAirContainer img {
+    width: 138px;
+    margin-top: 22px;
+  }
+  section .bottomProducts .ipadAirContainer h2 {
+    font-size: 1.25em;
+  }
+  section .bottomProducts .ipadAirContainer p {
+    font-size: 1.1em;
+  }
+}
+section .bottomProducts .iphoneProContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 36px;
+  text-decoration: none;
+}
+@media screen and (max-width: 734px) {
+  section .bottomProducts .iphoneProContainer {
+    background: url("img/iphoneProSmall.jpg") center bottom no-repeat;
+    height: 500px;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+}
+@media screen and (min-width: 735px) {
+  section .bottomProducts .iphoneProContainer {
+    background: url("img/iphoneProMedium.jpg") center;
+    height: 489px;
+    margin: 0px 12px 12px 6px;
+    width: 47.5%;
+  }
+}
+@media screen and (min-width: 1069px) {
+  section .bottomProducts .iphoneProContainer {
+    background: url("img/iphoneProLarge.jpg") center bottom no-repeat;
+    height: 580px;
+    margin: 0px 12px 12px 6px;
+    width: 47.5%;
+  }
+}
+section .bottomProducts .iphoneProContainer h1 {
+  color: rgb(0, 0, 0);
+  font-size: 2em;
+  margin-bottom: 8px;
+}
+section .bottomProducts .iphoneProContainer h2 {
+  color: black;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+section .bottomProducts .iphoneProContainer p {
+  font-size: 1.1em;
+}
+section .bottomProducts .iphoneProContainer p:hover {
+  text-decoration: underline;
+}
+@media screen and (min-width: 1069px) {
+  section .bottomProducts .iphoneProContainer img {
+    width: 138px;
+    margin-top: 22px;
+  }
+  section .bottomProducts .iphoneProContainer h2 {
+    font-size: 1.25em;
+  }
+  section .bottomProducts .iphoneProContainer p {
+    font-size: 1.1em;
+  }
+}
+@media screen and (min-width: 1069px) {
+  section .bottomProducts .iphoneProContainer h1 {
+    font-size: 2.6em;
+  }
+  section .bottomProducts .iphoneProContainer h2 {
+    font-size: 1.25em;
+  }
+  section .bottomProducts .iphoneProContainer p {
+    font-size: 1.1em;
+  }
+}
+section .bottomProducts .watchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 36px;
+  text-decoration: none;
+}
+@media screen and (max-width: 734px) {
+  section .bottomProducts .watchContainer {
+    background: url("img/watchSmall.jpg") center bottom;
+    height: 500px;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+}
+@media screen and (min-width: 735px) {
+  section .bottomProducts .watchContainer {
+    background: url("img/watchSmall.jpg") center bottom 5px;
+    height: 489px;
+    margin: 0px 6px 12px 12px;
+    width: 47.5%;
+  }
+}
+@media screen and (min-width: 1069px) {
+  section .bottomProducts .watchContainer {
+    background: url("img/watchLarge.jpg") center;
+    height: 580px;
+    margin: 0px 6px 12px 12px;
+    width: 47.5%;
+  }
+}
+section .bottomProducts .watchContainer h2 {
+  color: black;
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-top: 5px;
+}
+section .bottomProducts .watchContainer p {
+  font-size: 1.1em;
+}
+section .bottomProducts .watchContainer p:hover {
+  text-decoration: underline;
+}
+@media screen and (min-width: 1069px) {
+  section .bottomProducts .watchContainer img {
+    width: 138px;
+    margin-top: 22px;
+  }
+  section .bottomProducts .watchContainer h2 {
+    font-size: 1.3em;
+  }
+  section .bottomProducts .watchContainer p {
+    font-size: 1.1em;
+  }
+}
+section .bottomProducts .iphoneseContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 46px;
+  text-decoration: none;
+}
+@media screen and (max-width: 734px) {
+  section .bottomProducts .iphoneseContainer {
+    background: url("img/iPhoneseSmall.jpg") center bottom 5px;
+    height: 500px;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+}
+@media screen and (min-width: 735px) {
+  section .bottomProducts .iphoneseContainer {
+    background: url("img/iPhoneseMedium.jpg") center;
+    height: 489px;
+    margin: 0px 12px 12px 6px;
+    width: 47.5%;
+  }
+}
+@media screen and (min-width: 1069px) {
+  section .bottomProducts .iphoneseContainer {
+    background: url("img/iPhoneseLarge.jpg") center;
+    height: 580px;
+    margin: 0px 12px 12px 6px;
+    width: 47.5%;
+  }
+}
+section .bottomProducts .iphoneseContainer span {
+  color: black;
+  font-weight: 600;
+}
+section .bottomProducts .iphoneseContainer h2 {
+  color: black;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+section .bottomProducts .iphoneseContainer p {
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+section .bottomProducts .iphoneseContainer p:hover {
+  text-decoration: underline;
+}
+@media screen and (min-width: 1069px) {
+  section .bottomProducts .iphoneseContainer span {
+    font-size: 1.2em;
+  }
+  section .bottomProducts .iphoneseContainer img {
+    width: 144px;
+  }
+  section .bottomProducts .iphoneseContainer h2 {
+    font-size: 1.35em;
+  }
+  section .bottomProducts .iphoneseContainer p {
+    font-size: 1.1em;
+  }
+}
+section .bottomProducts .airpodsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 386px;
+  text-decoration: none;
+}
+@media screen and (max-width: 734px) {
+  section .bottomProducts .airpodsContainer {
+    background: url("img/airpodsSmall.jpg") center;
+    height: 500px;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+}
+@media screen and (min-width: 735px) {
+  section .bottomProducts .airpodsContainer {
+    background: url("img/airpodsMedium.jpg") center;
+    height: 489px;
+    margin: 0px 6px 12px 12px;
+    width: 47.5%;
+  }
+}
+@media screen and (min-width: 1069px) {
+  section .bottomProducts .airpodsContainer {
+    background: url("img/airpodsLarge.jpg") center;
+    height: 580px;
+    margin: 0px 6px 12px 12px;
+    width: 47.5%;
+  }
+}
+section .bottomProducts .airpodsContainer h1 {
+  color: rgb(0, 0, 0);
+  font-size: 2em;
+  margin: 0;
+}
+section .bottomProducts .airpodsContainer h2 {
+  color: black;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+section .bottomProducts .airpodsContainer p {
+  font-size: 1.1em;
+}
+section .bottomProducts .airpodsContainer p:hover {
+  text-decoration: underline;
+}
+@media screen and (min-width: 735px) {
+  section .bottomProducts .airpodsContainer {
+    padding-top: 366px;
+  }
+}
+@media screen and (min-width: 1069px) {
+  section .bottomProducts .airpodsContainer h1 {
+    font-size: 2.3em;
+    padding-top: 66px;
+  }
+  section .bottomProducts .airpodsContainer h2 {
+    font-size: 1.3em;
+  }
+  section .bottomProducts .airpodsContainer p {
+    font-size: 1.1em;
+  }
+}
+section .bottomProducts .tvContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 30px;
+  text-decoration: none;
+}
+@media screen and (max-width: 734px) {
+  section .bottomProducts .tvContainer {
+    background: url("img/appleTvMedium.jpg") center;
+    height: 500px;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+}
+@media screen and (min-width: 735px) {
+  section .bottomProducts .tvContainer {
+    background: url("img/appleTvMedium.jpg") center;
+    height: 489px;
+    margin: 0px 12px 12px 6px;
+    width: 47.5%;
+  }
+}
+@media screen and (min-width: 1069px) {
+  section .bottomProducts .tvContainer {
+    background: url("img/appleTvLarge.jpg") center;
+    height: 580px;
+    margin: 0px 12px 12px 6px;
+    width: 47.5%;
+  }
+}
+section .bottomProducts .tvContainer img {
+  width: 88px;
+  margin-bottom: 6px;
+}
+section .bottomProducts .tvContainer h1 {
+  color: rgb(0, 0, 0);
+  font-size: 2em;
+  margin: 0;
+  text-align: center;
+}
+section .bottomProducts .tvContainer p {
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+section .bottomProducts .tvContainer p:hover {
+  text-decoration: underline;
+}
+@media screen and (min-width: 1069px) {
+  section .bottomProducts .tvContainer img {
+    width: 100px;
+  }
+  section .bottomProducts .tvContainer h1 {
+    font-size: 2.6em;
+  }
+  section .bottomProducts .tvContainer p {
+    font-size: 1.1em;
+  }
+}
+
+footer {
+  color: #6e6e73;
+  font-size: 0.75em;
+  font-weight: 400;
+  padding: 10px;
+}
+footer .bandsInfo {
+  margin-bottom: 24px;
+  font-size: 1.1em;
+}
+footer hr {
+  margin: 0;
+}
+footer details {
+  display: flex;
+  flex-direction: column;
+}
+footer details summary {
+  list-style: none;
+  padding: 0.9em 0;
+}
+footer details summary:hover {
+  color: black;
+}
+footer details summary span {
+  position: absolute;
+  right: 20px;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+footer details a {
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+  padding: 5px 15px;
+}
+footer details a:last-child {
+  margin-bottom: 20px;
+}
+footer details a:first-child {
+  margin-top: 20px;
+}
+footer details a:hover {
+  text-decoration: underline;
+  color: black;
+}
+footer .searchSellerContainer {
+  margin: 10px 0;
+}
+footer .searchSellerContainer .searchSeller {
+  text-decoration: none;
+  font-size: 1.2em;
+}
+footer .searchSellerContainer .searchSeller:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=style.css.map */

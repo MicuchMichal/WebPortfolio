@@ -1,0 +1,222 @@
+@import 'variables';
+@import 'mixins';
+
+@mixin navBar {
+  width: 100%;
+    @media screen and (max-width: 833px) {
+      height: 48px;
+    }
+    @media screen and (min-width: 834px) {    
+      height: 44px;
+    }          
+}
+@mixin burgerMenu {
+  @media screen and (max-width: 833px) {
+    height: 100%;
+    width: 38px;
+  }
+  @media screen and (min-width: 834px) {
+    display: none;
+  }
+}
+@mixin classicMenu {
+  @media screen and (max-width:833px) {
+    display: none;
+  }
+  @media screen and (min-width: 834px) {
+    width: 1046px;
+    margin: auto;
+  }
+  @media screen and (max-width: 1046px) {
+    width: 100%;
+  }
+}
+@mixin bodyPadding {
+  @media screen and (max-width:833px) {
+    padding-top: 48px;
+  }
+  @media screen and (min-width: 834px) {
+    padding-top: 44px;
+  }
+}
+@mixin appleLogo {
+  @media screen and (min-width: 834px) {
+    display: none;
+  }
+}
+@mixin unicefSupport {
+  width: 100%;
+  @media screen and (max-width: 734px) {
+    height: 102px;
+    flex-direction: column;
+    a {
+      width: 250px;
+      text-align: center;
+      padding-top: 3px;
+    }
+    img {
+      width: 106px;
+    }
+  }
+  @media screen and (min-width: 735px) {    
+    height: 70px;
+    flex-direction: row;
+    a {
+      padding-left: 15px;
+    }
+    img {
+      width: 122px;
+    }
+  }  
+}
+@mixin MacBookAir {
+  @media screen and (max-width: 734px) {
+    background: url("img/macbookAirSmall.png") center;
+    height: 531px;
+  }
+  @media screen and (min-width: 735px) {   
+    background: url("img/macbookAirMedium.png") center;
+    height: 672px;
+  }
+  @media screen and (min-width: 1069px) {   
+    background: url("img/macbookAirLarge.png") center;
+    height: 652px;
+  }
+}
+@mixin MacBookPro {
+  @media screen and (max-width: 734px) {
+    background: url("img/macbookProSmall.jpg") center;
+    height: 500px;
+  }
+  @media screen and (min-width: 735px) {   
+    background: url("img/macbookProMedium.jpg") center;
+    height: 650px;
+  }
+  @media screen and (min-width: 1069px) {   
+    background: url("img/macbookProLarge.jpg") center;
+    height: 692px;
+  }
+}
+@mixin iPhone {
+  @media screen and (max-width: 734px) {
+    background: url("img/iphoneSmall.jpg") center;
+    height: 500px;
+  }
+  @media screen and (min-width: 735px) {   
+    background: url("img/iphoneMedium.jpg") center;
+    height: 650px;
+  }
+  @media screen and (min-width: 1069px) {   
+    background: url("img/iphoneLarge.jpg") center;
+    height: 692px;
+  }
+}
+
+@mixin ipad {
+  @media screen and (max-width: 734px) {
+    background: url("img/ipadairSmall.jpg") center bottom;
+    @include bottomProductsHeightSmall;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  @media screen and (min-width: 735px) {   
+    background: url("img/ipadairMedium.jpg") center;
+    @include bottomProductsHeightMedium;
+    @include bottomLeftProducts;
+  }
+  @media screen and (min-width: 1069px) {   
+    background: url("img/ipadairLarge.jpg") center;
+    @include bottomProductsHeightLarge;
+    @include bottomLeftProducts;
+  }
+}
+@mixin iphonePro {
+  @media screen and (max-width: 734px) {
+    background: url("img/iphoneProSmall.jpg") center bottom no-repeat;
+    @include bottomProductsHeightSmall;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  @media screen and (min-width: 735px) {   
+    background: url("img/iphoneProMedium.jpg") center;
+    @include bottomProductsHeightMedium;
+    @include bottomRightProducts;
+  }
+  @media screen and (min-width: 1069px) {   
+    background: url("img/iphoneProLarge.jpg") center bottom no-repeat;
+    @include bottomProductsHeightLarge;
+    @include bottomRightProducts;
+  }
+}
+@mixin watch {
+  @media screen and (max-width: 734px) {
+    background: url("img/watchSmall.jpg") center bottom;
+    @include bottomProductsHeightSmall;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  @media screen and (min-width: 735px) {   
+    background: url("img/watchSmall.jpg") center bottom 5px;
+    @include bottomProductsHeightMedium;
+    @include bottomLeftProducts;
+  }
+  @media screen and (min-width: 1069px) {   
+    background: url("img/watchLarge.jpg") center;
+    @include bottomProductsHeightLarge;
+    @include bottomLeftProducts;
+  }
+}
+@mixin iphonese {
+  @media screen and (max-width: 734px) {
+    background: url("img/iPhoneseSmall.jpg") center bottom 5px;
+    @include bottomProductsHeightSmall;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  @media screen and (min-width: 735px) {   
+    background: url("img/iPhoneseMedium.jpg") center;
+    @include bottomProductsHeightMedium;
+    @include bottomRightProducts;
+  }
+  @media screen and (min-width: 1069px) {   
+    background: url("img/iPhoneseLarge.jpg") center;
+    @include bottomProductsHeightLarge;
+    @include bottomRightProducts;
+  }
+}
+@mixin airpods {
+  @media screen and (max-width: 734px) {
+    background: url("img/airpodsSmall.jpg") center;
+    @include bottomProductsHeightSmall;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  @media screen and (min-width: 735px) {   
+    background: url("img/airpodsMedium.jpg") center;
+    @include bottomProductsHeightMedium;
+    @include bottomLeftProducts;
+  }
+  @media screen and (min-width: 1069px) {   
+    background: url("img/airpodsLarge.jpg") center;
+    @include bottomProductsHeightLarge;
+    @include bottomLeftProducts;
+  }
+}
+@mixin tv {
+  @media screen and (max-width: 734px) {
+    background: url("img/appleTvMedium.jpg") center;
+    @include bottomProductsHeightSmall;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  @media screen and (min-width: 735px) {   
+    background: url("img/appleTvMedium.jpg") center;
+    @include bottomProductsHeightMedium;
+    @include bottomRightProducts;
+  }
+  @media screen and (min-width: 1069px) {   
+    background: url("img/appleTvLarge.jpg") center;
+    @include bottomProductsHeightLarge;
+    @include bottomRightProducts;
+  }
+}

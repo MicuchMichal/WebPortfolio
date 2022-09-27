@@ -1,0 +1,897 @@
+<!doctype html>
+<html lang="sk">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="Css" content="zaklady css">
+    <meta name="keywords" content="portfolio, css">
+    <meta name="author" content="Michal Micuch">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="blog.css">
+    <link rel="shortcut icon" href="img/titleImg.png">
+    <title>Css Basics</title>
+</head>
+
+<body>
+<header class="ahoj">
+    <a href="index.html">
+        <img src="img/MMlogowhite.png" alt="Logo programatora Michal">
+    </a>
+    <nav>
+        <a href="Blog.html">Blog</a>
+    </nav>
+</header>
+<section>
+    <div id="section-table-css1">
+        <h1>Základy CSS</h1>
+        <div id="section-content">
+            <h2>Selektory</h2>
+            <table class="tabulky-css">
+                <tr>
+                    <th>Vlastnost</th>
+                    <th>popis</th>
+                    <th>priklad pouzitia</th>
+                    <th>vysledok</th>
+                </tr>
+                <tr>
+                    <td><code>*{}</code></td>
+                    <td>
+                        Vyberie vsetky elementy.
+                    </td>
+                    <td>
+                        <code>
+                            * {<br>
+                            &emsp;&emsp;color: <span style="color: green">green</span>;<br>
+                            }
+                        </code>
+                    </td>
+                    <td style="color: green">Vsetky tagy v celom HTML subore budu mat zelene pismo</td>
+                </tr>
+                <tr>
+                    <td><code>p{}</code></td>
+                    <td>
+                        <ul>
+                            <li>Typovy selektor.</li>
+                            <li>Vyberie vsetky elementy typu <code>&lt;p&gt;</code> a tie styluje:</li>
+                        </ul>
+                    </td>
+                    <td>
+
+                        <code>
+                            p {<br>
+                            &emsp;&emsp;color: <span style="color: red">red</span>;<br>
+                            }
+                        </code>
+                    </td>
+                    <td style="color: red">Ja som akykolvek <code>&lt;p&gt;</code> v HTML subore</td>
+                </tr>
+                <tr>
+                    <td><code>.nazov-triedy{}</code></td>
+                    <td>
+                        <ul>
+                            <li>Tzv. class v CSS.</li>
+                            <li>Trieda sa vklada v HTML dkumente pomocu attributu: class="nazov-triedy"</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <code>.toto-je-moja-trieda{<br>
+                        &emsp;&emsp;color: <span style="color: #1a97bb">blue</span>;<br>
+                        }
+                        </code>
+                    </td>
+                    <td>
+                        <code>&lt;p class="toto-je-moja-trieda"&gt;</code>
+                        <span style="color: #1a97bb">Tento text v class "toto-je-moja-trieda" bude modry</span><code>&lt;p&gt;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>#nazov-id{}</code></td>
+                    <td>
+                        <ul>
+                            <li>Tzv. identifikator alebo unikatna trieda.</li>
+                            <li>na 1 HTML stranke by mal byt pouzity len jeden identifikator</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <code>#moj-identifikator{<br>
+                            &emsp;&emsp;color: <span style="color: purple">purple</span>;<br>
+                            }
+                        </code>
+                    </td>
+                    <td>
+                        <code>&lt;p id="moj-identifikator"&gt;</code>
+                        <span style="color: purple">Tento text v id bude fialovy</span><code>&lt;p&gt;</code>
+                    </td>
+                </tr>
+            </table>
+            <h2>Pseudoselektory</h2>
+            <table class="tabulky-css">
+                <tr>
+                    <th>Vlastnost</th>
+                    <th>popis</th>
+                    <th>priklad pouzitia</th>
+                    <th>vysledok</th>
+                </tr>
+                <tr>
+                    <td><code>:hover</code></td>
+                    <td>Zmeni vlastnost elementu po nabehnuti kurzora na dany element</td>
+                    <td>
+                        <code>.trieda:hover{<br>
+                            &emsp;&emsp;background: yellow;<br>
+                            }
+                        </code>
+                    </td>
+                    <td>
+                        <code>&lt;p class="trieda"&gt;</code>
+                        <span class="hover">background tohoto textu sa zmeni na yellow</span><code>&lt;p&gt;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>:first-child</code>
+                        <code>:last-child</code>
+                    </td>
+                    <td>Zmeni vlastnost PRVEMU/POSLEDNEMU elementu v danom selektore</td>
+                    <td>
+                        <code>p:first-child{<br>
+                            &emsp;&emsp;color: orange;<br>
+                            }
+                        </code>
+                        <code>p:last-child{<br>
+                            &emsp;&emsp;color: red;<br>
+                            }
+                        </code>
+                    </td>
+                    <td>
+                        <p><code>&lt;p&gt;</code> <span style="color: orange">prvy paragraf</span> <code>&lt;/p&gt;</code></p>
+                        <p><code>&lt;p&gt;</code> <span style="color: red">posledny paragraf</span> <code>&lt;/p&gt;</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>:nth-child(odd)</code>
+                        <code>:nth-child(even)</code>
+                        <code>:nth-child(n)</code>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>"odd" vyselektuje neparne elementy</li>
+                            <li>"even" vyselektuje parne elementy</li>
+                            <li>za "n" mozem dosadit akykolvek algoritmus<br>
+                                (napr (3n+0 - vyselektujem kazdy treti element...))</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <code>p:nth-child(odd){<br>
+                            &emsp;&emsp;color: aqua;<br>
+                            }
+                        </code>
+                        <code>p:nth-child(even){<br>
+                            &emsp;&emsp;color: coral;<br>
+                            }
+                        </code>
+                    </td>
+                    <td>
+                        <p><code>&lt;p&gt;</code> <span style="color: aqua">neparny element p(1)</span> <code>&lt;/p&gt;</code></p>
+                        <p><code>&lt;p&gt;</code> <span style="color: coral">parny element p(2)</span> <code>&lt;/p&gt;</code></p>
+                        <p><code>&lt;p&gt;</code> <span style="color: aqua">neparny element p(3)</span> <code>&lt;/p&gt;</code></p>
+                        <p><code>&lt;p&gt;</code> <span style="color: coral">parny element p(4)</span> <code>&lt;/p&gt;</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>:link</code></td>
+                    <td>Zmeni vlastnost linku na ktory este uzivatel neklikol</td>
+                    <td>
+                        <code>
+                            a:link {<br>
+                            color: red;<br>
+                            }
+                        </code>
+                    </td>
+                    <td><a href="" style="color: red">Na tento link si este neklikol!</a></td>
+                </tr>
+                <tr>
+                    <td><code>:visited</code></td>
+                    <td>Zmani vlastnost linku ked uz uzivatel raz klikol na odkaz</td>
+                    <td>
+                        <code>
+                            a:visited {<br>
+                            color: green;<br>
+                            }
+                        </code>
+                    </td>
+                    <td class="visited"><a href="">Na tento link si uz klikol!</a></td>
+                </tr>
+                <tr>
+                    <td><code>:active</code></td>
+                    <td>Po kliknuti na elemnt zmeni jeho vlastnost</td>
+                    <td>
+                        <code>
+                            td:active {<br>
+                            background: blue;<br>
+                            }
+                        </code>
+                    </td>
+                    <td class="active" style="border: 1px solid blue">Klikni na tuto bunku!</td>
+                </tr>
+            </table>
+            <h2>Jednotky v CSS</h2>
+            <table class="tabulka-jednotiek">
+                <tr>
+                    <th colspan="2">Absolutne</th>
+                    <th colspan="2">Relativne</th>
+
+                </tr>
+                <tr>
+                    <td><code>px</code></td>
+                    <td>pixely</td>
+                    <td><code>em</code></td>
+                    <td>relativna velkost oproti defaultenj velkosti(napr 2em je 2x vacsie ako zakladna velkost elementu)</td>
+                </tr>
+                <tr>
+                    <td><code>mm</code></td>
+                    <td>milimetre</td>
+                    <td><code>%</code></td>
+                    <td>relativna vewlkost oproti rodicovskemu elementu (50% je polovicna velkost)</td>
+                </tr>
+                <tr>
+                    <td><code>in</code></td>
+                    <td>palce</td>
+                    <td><code>vw</code></td>
+                    <td>
+                        1vw = 1% sirke obrazovky<br>
+                        100vw = cela sirka obrazovky
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>cm</code></td>
+                    <td>centimetre</td>
+                    <td><code>vh</code></td>
+                    <td>
+                        1vh = 1% vyske obrazovky<br>
+                        100vh = cela vyska obrazovky
+                    </td>
+                </tr>
+                <tr>
+                    <td><code></code></td>
+                    <td></td>
+                    <td><code>rem</code></td>
+                    <td>Relativna velkost oproti rodicovskemu elementu (2rem bude 2x vacsie ako zakladan velkost)</td>
+                </tr>
+            </table>
+            <h2>Text a pismo</h2>
+            <table class="tabulky-css">
+                <tr>
+                    <th>Vlastnost</th>
+                    <th>popis</th>
+                    <th>priklad pouzitia</th>
+                    <th>vysledok</th>
+                </tr>
+                <tr>
+                    <td><code>color: </code></td>
+                    <td>
+                        <p>Zmeni farbu textu. Ma rozne podoby zapisu.</p>
+                    </td>
+                    <td>
+                        <code>
+                        color: red;<br>
+                        color: #00FF00;<br>
+                        color: rgba(0,0,255,0.5);
+                        </code>
+                    </td>
+                    <td>
+                        <span style="color: red">Cervena farba</span><br>
+                        <span style="color: #00FF00;">zelena farba</span><br>
+                        <span style="color: rgba(0,0,255,0.5)">modra farba s priehladnostou 0.5</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>font-family</code></td>
+                    <td>Nastavi font textu. Odporuca sa nastavit aj defaultny font.</td>
+                    <td><code>font-family: 'Ubuntu', Verdana;</code></td>
+                    <td id="font-family">Ubuntu text. Verdana je default. </td>
+                </tr>
+                <tr>
+                    <td><code>font-size</code></td>
+                    <td>Zmeni velkost pisma</td>
+                    <td><code>
+                        font-size: 2em;
+                    </code></td>
+                    <td style="font-size: 1.5em">1.5x vacsie pismo</td>
+                </tr>
+                <tr>
+                    <td><code>font-style</code></td>
+                    <td>Nastavuje styl pisma</td>
+                    <td><code>
+                        font-style: normal;<br>
+                        font-style: italic;<br>
+                        font-style: oblique;<br>
+                        font-style:inherit;<br>
+                    </code></td>
+                    <td>
+                        <span style="font-style: normal">Normalne pismo</span><br>
+                        <span style="font-style: italic">Italika/kurziva</span><br>
+                        <span style="font-style: oblique">Sikme pismo podobne italike</span><br>
+                        <span style="font-style: inherit">Zdedene z rodicovskeho elementu</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>text-transform</code></td>
+                    <td>pouziva sa k uprave textu</td>
+                    <td><code>
+                        text-transform: capitalize;<br>
+                        text-transform: uppercase;<br>
+                        text-transform: lowercase;<br>
+                        text-transform: inherit;
+                    </code></td>
+                    <td><code>
+                        <span style="text-transform: capitalize;">Prve pismeno v slove bude velke</span><br>
+                        <span style="text-transform: uppercase">Vsetky pismane su velke</span><br>
+                        <span style="text-transform: lowercase">Vsetly pismena budu male</span><br>
+                        <span>Zdedene od rodicovskeho elementu</span>
+                    </code></td>
+                </tr>
+                <tr>
+                    <td><code>line-height</code></td>
+                    <td>line-height udava vysku riadku</td>
+                    <td><code>line-height: 2em;</code></td>
+                    <td style="line-height: 2em">
+                        tento riadok ma vysku 2em.<br>
+                        tento taktiez.
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>text-decoration</code></td>
+                    <td>dekoruje rozne text</td>
+                    <td><code>
+                        text-decoration: underline;<br>
+                        text-decoration: blink;<br>
+                        text-decoration: overline;<br>
+                        text-decoration: line-through;<br>
+                    </code></td>
+                    <td><code>
+                        <span style="text-decoration: underline">Podciarknuty text</span><br>
+                        <span style="text-decoration: blink">blikajuci text</span><br>
+                        <span style="text-decoration: overline">ciara nad textom</span><br>
+                        <span style="text-decoration: line-through">preskrtnuty text</span>
+
+                    </code></td>
+                </tr>
+                <tr>
+                    <td><code>text-align</code></td>
+                    <td>Pomocou text-align mozeme zarovnavat text</td>
+                    <td><code>
+                        text-align: left;<br>
+                        text-align: right;<br>
+                        text-align: center;<br>
+                        text-align: justify<br>
+                    </code></td>
+                    <td>
+                        <p style="text-align: left; font-size: 15px; margin: 0; padding: 0">zarovnanie vlavo</p><br>
+                        <p style="text-align: right; font-size: 15px; margin: 0; padding: 0">zarovnanie vpravo</p><br>
+                        <p style="text-align: center; font-size: 15px; margin: 0; padding: 0">Vycentrovany text</p><br>
+                        <p style="text-align: justify; font-size: 15px; margin: 0; padding: 0">Zarovna text do bloku</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>text-shadow</code></td>
+                    <td>pridava tiene. Syntax: text-shadow: osX osY hrubka farba;</td>
+                    <td><code>
+                        text-shadow: 3px 3px 6px blue;
+                    </code></td>
+                    <td style="text-shadow: 3px 3px 6px blue;">tento text je tienovany</td>
+                </tr>
+                <tr>
+                    <td><code>font-wight</code></td>
+                    <td>Nastavuje tucnost pisma. Ma hodnoty 100-900</td>
+                    <td><code>
+                        font-weight: 100;<br>
+                        font-weight: 900;
+                    </code></td>
+                    <td>
+                        <span style="font-weight: 100">Text s hodnotou 100</span><br>
+                        <span style="font-weight: 900">Text s hodnotou 900</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>letter-spacing</code></td>
+                    <td>Zvysuje alebo znizuje rozostupy medzi pismenami</td>
+                    <td><code>
+                        letter-spacing: -2px;<br>
+                        letter-spacing: 2em;
+                    </code></td>
+                    <td><code>
+                        <span style="letter-spacing: -2px">letter-spacing: -2px;</span><br>
+                        <span style="letter-spacing: 2em">2 em</span>
+                    </code></td>
+                </tr>
+                <tr>
+                    <td><code>font-stretch</code></td>
+                    <td>nastavujeme ci budu pismena uzsie alebo sirsie</td>
+                    <td><code>
+                        font-stretch: ultra-condensed;<br>
+                        font-stretch: condensed;<br>
+                        font-stretch: normal;<br>
+                        font-stretch: expanded;<br>
+                        font-stretch: ultra-expanded;
+                    </code></td>
+                    <td>
+                        <span style="font-stretch: ultra-condensed">Najuzsi text</span><br>
+                        <span style="font-stretch: condensed;">uzky text</span><br>
+                        <span style="font-stretch: normal;">normalny text</span><br>
+                        <span style="font-stretch: expanded;">sirsi text</span><br>
+                        <span style="font-stretch: 1550%">Siroky text</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>word-spacing</code></td>
+                    <td>Definuje rozostupy medzi jednotlivymi slovami</td>
+                    <td><code>word-spacing: 15px;</code></td>
+                    <td style="word-spacing: 15px">Rozostupy 15 pixelov</td>
+                </tr>
+                <tr>
+                    <td><code>colum-hodnota</code></td>
+                    <td>pomocu colum valstnosti nastavujeme stlpce v texte</td>
+                    <td style="padding-right: 0"><code>
+                        column-count: 2;<br>
+                        column-gap: 2px;<br>
+                        column-width: 100px;<br>
+                        column-rule-widht: 10px;<br>
+                        colum-rule-style: solid;<br>
+                        colum-rule-color: blue
+                    </code></td>
+                    <td><code>
+                        nastavuje pocet stlpcov(2)<br>
+                        medzera medzi stlpcami<br>
+                        Nastavi sirku stlpca<br>
+                        Nastavi sirku medzery medzi stlpcami<br>
+                        Rovna ciare medzi stlpcami<br>
+                        Modra ciara medzi stlpcami
+                    </code></td>
+                </tr>
+            </table>
+            <h2>Zoznamy</h2>
+            <table class="tabulky-css">
+                <tr>
+                    <th>Vlastnost</th>
+                    <th>popis</th>
+                    <th>priklad pouzitia</th>
+                    <th>vysledok</th>
+                </tr>
+                <tr>
+                    <td><code>list-style-type</code></td>
+                    <td>Nastavenie typu odrazok</td>
+                    <td><code>
+                        list-style-type: square;<br>
+                        list-style-type: decimal;<br>
+                        list-style-type: cicle;<br>
+                        list-style-type: none;<br>
+                        list-style-type: lower-alpha;<br>
+                        list-style-type: upper-roman;
+                    </code></td>
+                    <td>
+                        <ul>
+                            <li style="list-style-type: square">stvorcova odrazka</li>
+                            <li style="list-style-type: decimal">cislovana odrazka</li>
+                            <li style="list-style-type: circle">kruhova odrazka</li>
+                            <li style="list-style-type: none">ziadna odrazka</li>
+                            <li style="list-style-type: lower-alpha">pismenkova odrazka</li>
+                            <li style="list-style-type: upper-roman">odrazka rimskym cislom</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>list-style-position</code></td>
+                    <td>Pozicuje odrazky v zozname</td>
+                    <td><code>
+                        list-style-position: inside;<br>
+                        list-style-position: outside;
+                    </code></td>
+                    <td>
+                        <ul>
+                            <li style="list-style-position: inside; border: 1px solid white">odrazka vnutri zoznamu</li>
+                            <li style="list-style-position: outside; border: 1px solid white">odrazka vonku zoznamu</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>list-style-image</code></td>
+                    <td>Mozeme miesto odrazky vlozit nejaky obrazok</td>
+                    <td><code>list-style-image: url('arrow.png');</code></td>
+                    <td>vlozi obrazok ako odrazku</td>
+                </tr>
+            </table>
+            <h2>Vzhlad a nastavenie tabuliek</h2>
+            <table class="tabulky-css">
+                <tr>
+                    <th>Vlastnost</th>
+                    <th>popis</th>
+                    <th>priklad pouzitia</th>
+                    <th>vysledok</th>
+                </tr>
+                <tr>
+                    <td><code>table-layout</code></td>
+                    <td>Nastavujeme sirku stlpcov v tabulke</td>
+                    <td><code>
+                        table-layout: auto;<br>
+                        table-layout: fixed;
+                    </code></td>
+                    <td>
+                        automaticka sirka buniek<br>
+                        fixna sirka buniek
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>border spacing</code></td>
+                    <td>Nastavnie rozostupov medzi bunkami</td>
+                    <td><code>border-spacing: 10px;</code></td>
+                    <td>
+                        <table style="border-spacing: 10px; border: 1px solid white">
+                            <tr>
+                                <td>rozostupy</td>
+                                <td>medzi</td>
+                                <td>bunkami</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>border-collapse</code></td>
+                    <td>ramceky sa budu vykreslovat iba ako jednoducha ciara</td>
+                    <td><code>
+                        border-collapse: collapse;<br>
+                        border-collapse: separate;
+                    </code></td>
+                    <td>
+                        <table border="1" style="border-collapse: collapse">
+                            <tr>
+                                <td>iba</td>
+                                <td>jedna</td>
+                                <td>ciara</td>
+                            </tr>
+                        </table>
+                        <table border="1" style="border-collapse: separate">
+                            <tr>
+                                <td>stale</td>
+                                <td>dve</td>
+                                <td>ciary</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>caption-side</code></td>
+                    <td>Nastavuje ci sa ma nadpis tabulky zobrazit hore alebo dolu</td>
+                    <td>
+                        <code>
+                            caption-side: top;<br>
+                            caption-side: bottom:
+                        </code>
+                    </td>
+                    <td>
+                        nazov tabulky je hore <br>
+                        nazov tabulky je dole
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>empty-cells</code></td>
+                    <td>moze skryt ramceky prazdnych buniek</td>
+                    <td><code>
+                        empty-cells: show;
+                        empty-cells: hide;
+                    </code></td>
+                    <td>
+                        ramceky ostanu viditelne <br>
+                        ramceky sa skryju
+                    </td>
+                </tr>
+            </table>
+            <h2>Okraje, ramceky, margin, padding</h2>
+            <table class="tabulky-css">
+                <tr>
+                    <th>Vlastnost</th>
+                    <th>popis</th>
+                    <th>priklad pouzitia</th>
+                    <th>vysledok</th>
+                </tr>
+                <tr>
+                    <td><code>margin</code></td>
+                    <td>
+                        <ul>
+                            <li>Vonkajsi okraj, respektive vonkajsie odsadenie</li>
+                            <li>mozem nastavovat aj jednotlivym stranam (left,right,top,bottom)</li>
+                        </ul>
+                        </td>
+                    <td><code>margin: 10px;<br>margin-left:20px</code></td>
+                    <td>
+                        <ul>
+                            <li style="margin: 10px">10 pixelove odsadenie zo vsetklych stran</li>
+                            <li style="margin-left: 20px">20 pixelove odsadenie zlava</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>padding</code></td>
+                    <td>vnutorne odsadenie</td>
+                    <td><code>padding: 15px;</code></td>
+                    <td style="padding: 15px; border: 1px solid #1a97bb"><span>tento text je odsadeny vnutri od okraja o 15 px</span></td>
+                </tr>
+                <tr>
+                    <td><code>border</code></td>
+                    <td>
+                        <ul>
+                            <li>Pomocou tejto vlastnosti nastavujem okraje elementom</li>
+                            <li>Ma vseobecny zapis: <code>border: sirka styl farba;</code></li>
+                            <li>Ma valmi vela moznosti stylizacie.</li>
+                        </ul>
+                    </td>
+                    <td><code>
+                        border-bottom: 1px solid yellow;<br>
+                        border-right: 5px dotted #5454ff;<br>
+                        border-left: dotted green;<br>
+                        border-top: 10px red double;
+                    </code></td>
+                    <td>
+                        <div class="border-box"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>border-radius</code></td>
+                    <td>Nastavuje plomer zaoblenia</td>
+                    <td><code>
+                        height: 200px;<br>
+                        width: 300px;<br>
+                        border: #bd60be solid 3px;<br>
+                        border-radius: 10px;
+                    </code></td>
+                    <td>
+                        <div class="okraj-zaoblenie" style="padding: 10px">Zaobleny okraj</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>box-shadow</code></td>
+                    <td>
+                        <ul>
+                            <li>tienenie okolo nejakeho elementu</li>
+                            <li>ma zapis: box-shadow: osX osY rozmazanie velkost-tiena umiestnenie</li>
+                    </ul>
+
+                    </td>
+                    <td><code>
+                        box-shadow: 10px 10px 5px red;
+                        box-shadow: 5px 5px 3px green inset;
+                    </code></td>
+                    <td>
+                        <div style="width: 120px; height: 20px; box-shadow: 10px 10px 5px red; border: 1px solid white; margin-bottom: 20px"></div>
+                        <div style="width: 120px; height: 20px; box-shadow: 5px 5px 3px green inset; border: 1px solid white"></div>
+                    </td>
+                </tr>
+            </table>
+            <h2>Rozmery, vykreslovanie, prekryvanie a pozicovanie v CSS</h2>
+            <table class="tabulky-css">
+                <tr>
+                    <th>Vlastnost</th>
+                    <th>popis</th>
+                    <th>priklad pouzitia</th>
+                    <th>vysledok</th>
+                </tr>
+                <tr>
+                    <td><code>box-sizing</code></td>
+                    <td>Nastavuje co vsetko bude vyska a sirka elementu zahrnat</td>
+                    <td><code>
+                        box-sizing: border-box;<br>
+                        box-sizing: content-box;
+                    </code></td>
+                    <td>
+                        <ul>
+                            <li>vyska aj sirka zahrna obsah + padding + border (nie margin)</li>
+                            <li>vyska aj sirka zahrna len obsah elementu (nie padding ani border)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>width</code></td>
+                    <td>nastavuje sa sirka elemenu</td>
+                    <td><code>width: 250px;</code></td>
+                    <td><div style="background: #1a97bb; width: 250px">tento div ma 250px sirku</div></td>
+                </tr>
+                <tr>
+                    <td><code>height</code></td>
+                    <td>Nastavuje sa vyska elementu</td>
+                    <td><code>height: 40px</code></td>
+                    <td><div style="background: orange; height: 40px">tento div ma vysku 40 px</div></td>
+                </tr>
+                <tr>
+                    <td><code>max-widht<br>max-height</code></td>
+                    <td>Nastavuje maximalnu vyku/sirku elementu</td>
+                    <td><code>max-width: 60px;<br>max-height: 60px;</code></td>
+                    <td>element bude maximalne 60 px vysoky aj siroky</td>
+                </tr>
+                <tr>
+                    <td><code>min-width<br>min-height</code></td>
+                    <td>Nastavuje minimalny vysku/sirku elementu</td>
+                    <td><code>min-width: 60px;<br>min-height: 60px;</code></td>
+                    <td>element bude minimalne 60 pixelov vysoky aj siroky</td>
+                </tr>
+                <tr>
+                    <td><code>dispaly</code></td>
+                    <td>nastavuje, akym sposobom ma byt html element vykresleny:
+                    <ul style="font-size: 14px;">
+                        <li>flex - element sa vykresli ako flexbox</li>
+                        <li>block - element sa zobrazi ako blokovy, roztiahne sa do co najvacej sirky a elementy sa budu radit pod seba</li>
+                        <li>inline - elementy sa budu radit vedla seba na riadok</li>
+                        <li>inline-table - alement je vykresleny ako riadkova tabulka</li>
+                        <li>table - element je vykresleny ako tabulka</li>
+                        <li>table-cell - element je vykresleny ako bunka tabulky</li>
+                        <li>table-row - element je vykresleny ako riadok tabulky</li>
+                        <li>...</li>
+                    </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><code>visibility</code></td>
+                    <td>umoznuje skryt html element</td>
+                    <td><code>visibility: hidden;</code></td>
+                    <td>
+                        <div style="background: #1a97bb">tento element je vidno</div>
+                        <div style="background: #1a97bb; visibility: hidden">tento element je skryty</div>
+                        <div style="background: #1a97bb">tento element je vidno</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>Z-index</code></td>
+                    <td>Nastavujeme pomocou neho hlbku bloku</td>
+                    <td><code>
+                        #zeleny {<br>
+                        z-index: 3;<br>
+                        }<br>
+                        #modry {<br>
+                        z-index: 2;<br>
+                        }<br>
+                        #cerveny {<br>
+                        z-index: 1;<br>
+                        }
+                    </code></td>
+                    <td>
+                        <div style="border: 1px white solid; width: 200px; height: 200px">
+                            <div class="divy-zindex" id="cerveny"></div>
+                            <div class="divy-zindex" id="modry"></div>
+                            <div class="divy-zindex" id="zeleny"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>vertical-align</code></td>
+                    <td>Nastavujeme vertikalne zarovnanie HTML elementu. Ma rozne attributy:
+                    <ul>
+                        <li>dlzka - element mozem posunut abosultnymi/ralativnymi hodnotami</li>
+                        <li>baseline - element umiestnim na riadok</li>
+                        <li>top - umiestnenie elementu co najvyssie</li>
+                        <li>middle - zvisle vycentrovanie</li>
+                        <li>bottom - umiestni element dole</li>
+                    </ul>
+                    </td>
+                    <td><code>vertical-align: top;<br>vertical-align: middle;<br>vertical-align: bottom;</code></td>
+                    <td>
+                        <p>&emsp;&emsp;top</p><br>
+                        <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;middle</p><br>
+                        <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;bottom</p><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>position</code></td>
+                    <td>Nastavuje typ pozicie elementu. napriklad:
+                    <ul>
+                        <li>static - (vychodzia hodnota)</li>
+                        <li>absolute - element je vytrhnuty z obsahu a zobrazi sa presne tam kde mu zadam suradnice</li>
+                        <li>fixed - element sa prichyti na obrazovku a zostane tam bezohladu kde scrollujem</li>
+                        <li> relative - element je umiestneny vzhladom na ostatne elementy okolo neho</li>
+                    </ul>
+                    </td>
+                    <td><code>
+                        position: absolute; <br>
+                        position: fixed; <br>
+                        position: relative;
+                    </code></td>
+                    <td>
+                        Pri absolutnom pozicovani zadavam hodnoty:
+                        <ul>
+                            <li>top:</li>
+                            <li>right:</li>
+                            <li>bottom:</li>
+                            <li>left:</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <h2>plavajuci obsah, pretekanie, orezavanie</h2>
+            <table class="tabulky-css">
+                <tr>
+                    <th>Vlastnost</th>
+                    <th>popis</th>
+                    <th>priklad pouzitia</th>
+                    <th>vysledok</th>
+                </tr>
+                <tr>
+                    <td><code>float</code></td>
+                    <td>Plavajuci element je vynaty z obsahu stranky a je obtekany neplavajucimi elementami</td>
+                    <td>
+                        <code>
+                            float: left;
+                            float: right;
+                        </code>
+                    </td>
+                    <td>
+                        <div class="float-elementy" style="float: right"></div>
+                        <div class="float-elementy" style="float: left"></div>
+                        <p>tieto dva elementy su plavajuce, tento text ich obteka, ako sa len da. Tu mozete vidiet obtekanie z oboch stran.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>clear</code></td>
+                    <td>Nastavi, v ktorej casti elementu NIE JE povolene obtekanie obsahu</td>
+                    <td><code>
+                        clear: right; <br>
+                        clear: left: <br>
+                        clear: both;
+                    </code></td>
+                    <td style="clear: both">
+                        <div class="float-elementy-clear"></div>
+                        <div class="float-elementy-clear" style="float: right"></div>
+                        <p style="clear: both">Tieto dva elementy su nastavene na hod. "clear:both;" cize ani jeden element nemoze byt obtekany.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>overflow</code></td>
+                    <td>nastavujeme spravanie elementu v pripade ze vytecie z obsahu:
+                    <ul>
+                        <li>visible - (vychodie) preteceny obsah je zobrazeny mimo elementu</li>
+                        <li>hidden - obsah je orezany tak aby sa vosiel do elementu a co sa nevojde sa nezobrazi</li>
+                        <li>scroll - elementu sa prida scrollbar tak, aby bolo mozne zobrazit cely obsah</li>
+                        <li>auto - scrollbar sa prida len v pripade ze sa obsah nevojde</li>
+                    </ul>
+                    </td>
+                    <td><code>overflow: auto;</code></td>
+                    <td>
+                        <div style="width: 220px; height: 50px; overflow: auto; border: 1px solid white">
+                            <p>Tu sa zobrazi scrollbar ak sa sem nevojde tento text</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>
+                        overflow-x <br>
+                        overflow-y
+                    </code></td>
+                    <td>Nastavuje spravanie elementu ak obsah pretecie len na sirku alebo vysku</td>
+                    <td>overflow-x: auto</td>
+                    <td>
+                        <div style="width: 220px; height: 50px; overflow-x: auto; border: 1px solid white">
+                            AkTentoObsahPretecieNaSirkuZobraziSaScrollbar
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>resize</code></td>
+                    <td>Pomocou tejto vlastnosti dovolim uzivatelovi menit velkost elementu</td>
+                    <td><code>
+                        resize: horizontal; <br>
+                        resize: vertical; <br>
+                        resize: both;
+                    </code></td>
+                    <td style="display: flex">
+                        <div class="float-elementy" style="resize: horizontal; overflow: auto" >horizontalne</div>
+                        <div class="float-elementy" style="resize: both; overflow: auto">both</div>
+                        <div class="float-elementy" style="resize: vertical; overflow: auto">vert.</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <p id="right-bootom-text">Css</p>
+</section>
+</body>
+
+</html>

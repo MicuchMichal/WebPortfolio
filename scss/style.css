@@ -1,0 +1,1105 @@
+@media screen and (min-width: 586px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px 5px 10px;
+  }
+  header nav .logoContainer {
+    height: 80px;
+    padding-top: 12px;
+    margin-bottom: 6px;
+    width: 98%;
+  }
+  header nav .logoContainer a {
+    width: 188px;
+    height: 62px;
+  }
+  header nav .logoContainer a span:first-child {
+    font-size: 2.2em;
+  }
+  header nav .logoContainer a span:last-child {
+    font-size: 0.87em;
+    line-height: auto;
+    padding-top: 5px;
+  }
+  header ul {
+    display: flex;
+    flex-direction: row;
+  }
+  header ul li {
+    width: 18%;
+    font-size: 0.7em;
+  }
+  header ul li a {
+    width: 100%;
+  }
+  header ul li:last-child a {
+    padding: 3px 3px 3px 3px;
+  }
+  section .image {
+    width: 70%;
+    margin: auto;
+  }
+  section .image .image1 {
+    top: 616px;
+  }
+  section .image .image2 {
+    top: 610px;
+  }
+  section .image .image3 {
+    top: 604px;
+  }
+  section .image .image4 {
+    top: 598px;
+  }
+  section .image .image5 {
+    top: 592px;
+  }
+  section .image .image6 {
+    top: 586px;
+  }
+  section .image .image7 {
+    top: 580px;
+  }
+}
+@media screen and (min-width: 784px) {
+  header {
+    position: fixed;
+    width: 100%;
+    height: 84px;
+    flex-direction: row;
+    z-index: 120;
+  }
+  header nav {
+    flex-direction: row;
+    height: 84px;
+    width: 100%;
+  }
+  header nav .logoContainer {
+    position: absolute;
+    width: 38%;
+    border-bottom: none;
+    border-right: 1px solid rgb(137, 190, 189);
+    height: 100%;
+  }
+  header nav ul {
+    width: 60%;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    max-width: 624px;
+  }
+  header nav ul li {
+    margin-left: 10px;
+  }
+  header nav ul li a {
+    font-size: 1.4em;
+  }
+  header nav ul li:last-child {
+    width: 96px;
+    margin: auto;
+  }
+  header nav ul li:last-child a {
+    margin: auto;
+    border: none;
+  }
+  section {
+    display: flex;
+    flex-direction: row;
+  }
+  section .image {
+    margin: 0;
+    width: 50%;
+    height: 90vh;
+  }
+  section .image div {
+    overflow-y: hidden;
+  }
+  section .image .image1 {
+    top: 248px;
+    left: calc(50% - 330px);
+  }
+  section .image .image2 {
+    top: 242px;
+    left: calc(50% - 336px);
+  }
+  section .image .image3 {
+    top: 236px;
+    left: calc(50% - 342px);
+  }
+  section .image .image4 {
+    top: 230px;
+    left: calc(50% - 348px);
+  }
+  section .image .image5 {
+    top: 224px;
+    left: calc(50% - 354px);
+  }
+  section .image .image6 {
+    top: 218px;
+    left: calc(50% - 360px);
+  }
+  section .image .image7 {
+    top: 212px;
+    left: calc(50% - 366px);
+  }
+  section .heading {
+    width: 45%;
+    padding: 443px 0;
+    text-align: left;
+  }
+  section .heading .animated-title {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1184px) {
+  header {
+    height: 62px;
+  }
+  header nav {
+    height: 62px;
+  }
+  header nav .logoContainer {
+    padding-top: 5px;
+  }
+  header nav ul {
+    top: 10px;
+  }
+  section .image {
+    width: 45%;
+  }
+  section .image .image1 {
+    width: 356px;
+    height: 582px;
+    background-size: cover;
+    left: calc(50% - 30px - 38vw);
+    top: 160px;
+  }
+  section .image .image2 {
+    width: 368px;
+    height: 594px;
+    left: calc(50% - 36px - 38vw);
+    top: 154px;
+  }
+  section .image .image3 {
+    width: 380px;
+    height: 606px;
+    left: calc(50% - 42px - 38vw);
+    top: 148px;
+  }
+  section .image .image4 {
+    width: 392px;
+    height: 618px;
+    left: calc(50% - 48px - 38vw);
+    top: 142px;
+  }
+  section .image .image5 {
+    width: 404px;
+    height: 630px;
+    left: calc(50% - 54px - 38vw);
+    top: 136px;
+  }
+  section .image .image6 {
+    width: 416px;
+    height: 642px;
+    left: calc(50% - 60px - 38vw);
+    top: 130px;
+  }
+  section .image .image7 {
+    width: 428px;
+    height: 654px;
+    left: calc(50% - 66px - 38vw);
+    top: 124px;
+  }
+  section .heading .animated-title {
+    font-size: 1.6em;
+  }
+}
+@font-face {
+  font-family: Lobster;
+  src: url("fonts/lobster/Lobster-Regular.ttf");
+}
+@font-face {
+  font-family: Oswald;
+  src: url("fonts/oswald/Oswald-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: Poppins;
+  src: url("fonts/poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: League Script;
+  src: url("fonts/league/LeagueScript-Regular.ttf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(white, rgb(137, 190, 189)) no-repeat;
+  min-height: 100vh;
+  font-family: Oswald, Arial, Helvetica, sans-serif;
+}
+
+header {
+  height: auto;
+  padding-bottom: 20px;
+  background: #254e58;
+  display: flex;
+  flex-direction: column;
+}
+header nav .logoContainer {
+  width: 60%;
+  margin: auto;
+  border-bottom: 1px solid rgb(137, 190, 189);
+}
+header nav .logoContainer a {
+  color: rgb(137, 190, 189);
+  text-decoration: none;
+  display: block;
+  width: 128px;
+  margin: auto;
+  height: 50px;
+  transition: color 0.55s;
+}
+header nav .logoContainer a:hover {
+  color: #112d32;
+}
+header nav .logoContainer a span:first-child {
+  padding-top: 10px;
+  display: block;
+  font-size: 1.5em;
+  font-family: Lobster;
+  line-height: 18px;
+  letter-spacing: -0.05em;
+}
+header nav .logoContainer a span:last-child {
+  display: block;
+  font-size: 0.6em;
+  line-height: 10px;
+  letter-spacing: 0.35em;
+}
+header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+header nav ul li {
+  text-align: center;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: rgb(137, 190, 189);
+  display: block;
+  padding: 10px;
+  font-size: 1.6em;
+  transition: color 0.55s;
+}
+header nav ul li a:hover {
+  color: #112d32;
+}
+header nav ul li:last-child {
+  display: block;
+  margin: auto;
+  width: 166px;
+  background: rgb(137, 190, 189);
+  border: 2px solid rgb(137, 190, 189);
+  border-radius: 8px;
+}
+header nav ul li:last-child a {
+  color: #112d32;
+  transition: color 0.55s;
+  transition: background 0.55s;
+}
+header nav ul li:last-child a:hover {
+  color: rgb(137, 190, 189);
+  background: #254e58;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
+}
+section .image {
+  width: 100%;
+  height: 620px;
+}
+section .image:hover .image1 {
+  transform: perspective(1000px) rotateY(360deg);
+}
+section .image:hover .image2 {
+  transform: perspective(1000px) rotateY(356deg);
+}
+section .image:hover .image3 {
+  transform: perspective(1000px) rotateY(352deg);
+}
+section .image:hover .image4 {
+  transform: perspective(1000px) rotateY(348deg);
+}
+section .image:hover .image5 {
+  transform: perspective(1000px) rotateY(344deg);
+}
+section .image:hover .image6 {
+  transform: perspective(1000px) rotateY(340deg);
+}
+section .image:hover .image7 {
+  transform: perspective(1000px) rotateY(336deg);
+}
+section .image div {
+  position: absolute;
+  z-index: 100;
+}
+section .image .image1 {
+  background: url("graphics/Me.PNG") center no-repeat;
+  background-size: 406px;
+  width: 250px;
+  height: 406px;
+  top: 796px;
+  left: calc(50% - 130px);
+  transform: perspective(1000px) rotateY(10deg);
+  border: 4px solid #b69a3d;
+  transition: transform 1.2s ease-in-out;
+}
+section .image .image2 {
+  width: 262px;
+  height: 418px;
+  top: 790px;
+  left: calc(50% - 136px);
+  transform: perspective(1000px) rotateY(14deg);
+  border: 4px solid #9b9a9f;
+  transition: transform 1.2s 0.1s ease-in-out;
+}
+section .image .image3 {
+  width: 274px;
+  height: 430px;
+  top: 784px;
+  left: calc(50% - 142px);
+  transform: perspective(1000px) rotateY(18deg);
+  border: 4px solid #92bcf2;
+  transition: transform 1.2s 0.2s ease-in-out;
+}
+section .image .image4 {
+  width: 286px;
+  height: 446px;
+  top: 778px;
+  left: calc(50% - 148px);
+  transform: perspective(1000px) rotateY(22deg);
+  border: 4px solid #899eb9;
+  transition: transform 1.2s 0.4s ease-in-out;
+}
+section .image .image5 {
+  width: 298px;
+  height: 458px;
+  top: 772px;
+  left: calc(50% - 154px);
+  transform: perspective(1000px) rotateY(26deg);
+  border: 4px solid #4d79b8;
+  transition: transform 1.2s 0.4s ease-in-out;
+}
+section .image .image6 {
+  width: 310px;
+  height: 470px;
+  top: 766px;
+  left: calc(50% - 160px);
+  transform: perspective(1000px) rotateY(30deg);
+  border: 4px solid #e2b2a5;
+  transition: transform 1.2s 0.5s ease-in-out;
+}
+section .image .image7 {
+  width: 322px;
+  height: 482px;
+  top: 760px;
+  left: calc(50% - 166px);
+  transform: perspective(1000px) rotateY(34deg);
+  border: 4px solid #8d751b;
+  transition: transform 1.2s 0.6s ease-in-out;
+}
+section .heading {
+  position: relative;
+  height: 436px;
+  width: 98%;
+  color: #254e58;
+  padding: 0 1% 0 1%;
+  text-align: center;
+}
+section .heading .animated-title > div {
+  height: 50%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+section .heading .animated-title > div div {
+  font-size: 3em;
+  padding: 2vmin 0;
+  width: 100%;
+  position: absolute;
+}
+section .heading .animated-title > div div span {
+  display: block;
+}
+section .heading .animated-title > div.text-top {
+  border-bottom: 1px solid #254e58;
+  top: 0;
+}
+section .heading .animated-title > div.text-top div {
+  -webkit-animation: showTopText 1s;
+          animation: showTopText 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  bottom: 0;
+  transform: translate(0, 100%);
+}
+section .heading .animated-title > div.text-top div span:first-child {
+  color: #4f4a41;
+}
+section .heading .animated-title > div.text-bottom {
+  bottom: 0;
+}
+section .heading .animated-title > div.text-bottom div {
+  -webkit-animation: showBottomText 0.5s;
+          animation: showBottomText 0.5s;
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  top: 0;
+  transform: translate(0, -100%);
+}
+@-webkit-keyframes showTopText {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+  40%, 60% {
+    transform: translate3d(0, 50%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes showTopText {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+  40%, 60% {
+    transform: translate3d(0, 50%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes showBottomText {
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes showBottomText {
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.sidePageSection {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.sidePageSection .articles {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 100%;
+}
+.sidePageSection .articles h2 {
+  color: #4f4a41;
+  font-size: 3em;
+  line-height: 48px;
+}
+.sidePageSection .articles span {
+  font-family: "League Script";
+  font-size: 0.9em;
+  color: #6e6658;
+}
+.sidePageSection .articles p {
+  margin: 10px;
+  color: #112d32;
+}
+.sidePageSection .photos {
+  width: 60%;
+  margin: auto;
+}
+.sidePageSection .photos img {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  filter: grayscale(100%);
+  transition: 0.55s;
+}
+.sidePageSection .photos img:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+.sidePageSection .photos span {
+  padding-left: 20px;
+  font-family: "League Script";
+  font-size: 0.9em;
+  color: #6e6658;
+}
+.sidePageSection .progressBar {
+  width: 100%;
+  max-width: 100%;
+}
+.sidePageSection .progressBar progress {
+  opacity: 0;
+}
+.sidePageSection .progressBar .progress-element {
+  width: 250px;
+  margin: auto;
+  padding: 10px 0 10px 0;
+}
+.sidePageSection .progressBar .progress-container {
+  position: relative;
+  background: #eee;
+  height: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.sidePageSection .progressBar .progress-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background: #112d32;
+}
+.sidePageSection .progressBar .progress-element--html .progress-container::before {
+  -webkit-animation: progress-html 1s ease-in forwards;
+          animation: progress-html 1s ease-in forwards;
+}
+.sidePageSection .progressBar .progress-element--css .progress-container::before {
+  -webkit-animation: progress-css 1s ease-in forwards;
+          animation: progress-css 1s ease-in forwards;
+}
+.sidePageSection .progressBar .progress-element--bootstrap .progress-container::before {
+  -webkit-animation: progress-bootstrap 1s ease-in forwards;
+          animation: progress-bootstrap 1s ease-in forwards;
+}
+.sidePageSection .progressBar .progress-element--javascript .progress-container::before {
+  -webkit-animation: progress-javascript 1s ease-in forwards;
+          animation: progress-javascript 1s ease-in forwards;
+}
+.sidePageSection .progressBar .progress-element--photoshop .progress-container::before {
+  -webkit-animation: progress-photoshop 1s ease-in forwards;
+          animation: progress-photoshop 1s ease-in forwards;
+}
+.sidePageSection .progressBar .progress-label {
+  position: relative;
+}
+.sidePageSection .progressBar .progress-label::after {
+  counter-reset: num var(--num);
+  content: counter(num) "%";
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.sidePageSection .progressBar .progress-element--html .progress-label::after {
+  -webkit-animation: progress-text-html 1s ease-in forwards;
+          animation: progress-text-html 1s ease-in forwards;
+}
+.sidePageSection .progressBar .progress-element--css .progress-label::after {
+  -webkit-animation: progress-text-css 1s ease-in forwards;
+          animation: progress-text-css 1s ease-in forwards;
+}
+.sidePageSection .progressBar .progress-element--bootstrap .progress-label::after {
+  -webkit-animation: progress-text-bootstrap 1s ease-in forwards;
+          animation: progress-text-bootstrap 1s ease-in forwards;
+}
+.sidePageSection .progressBar .progress-element--javascript .progress-label::after {
+  -webkit-animation: progress-text-javascript 1s ease-in forwards;
+          animation: progress-text-javascript 1s ease-in forwards;
+}
+.sidePageSection .progressBar .progress-element--photoshop .progress-label::after {
+  -webkit-animation: progress-text-photoshop 1s ease-in forwards;
+          animation: progress-text-photoshop 1s ease-in forwards;
+}
+@-webkit-keyframes progress-html {
+  to {
+    width: 75%;
+    background: #f16524;
+  }
+}
+@keyframes progress-html {
+  to {
+    width: 75%;
+    background: #f16524;
+  }
+}
+@-webkit-keyframes progress-css {
+  to {
+    width: 60%;
+    background: #2965f1;
+  }
+}
+@keyframes progress-css {
+  to {
+    width: 60%;
+    background: #2965f1;
+  }
+}
+@-webkit-keyframes progress-bootstrap {
+  to {
+    width: 35%;
+    background: #880afb;
+  }
+}
+@keyframes progress-bootstrap {
+  to {
+    width: 35%;
+    background: #880afb;
+  }
+}
+@-webkit-keyframes progress-javascript {
+  to {
+    width: 15%;
+    background: #f0be25;
+  }
+}
+@keyframes progress-javascript {
+  to {
+    width: 15%;
+    background: #f0be25;
+  }
+}
+@-webkit-keyframes progress-photoshop {
+  to {
+    width: 40%;
+    background: #30a8ff;
+  }
+}
+@keyframes progress-photoshop {
+  to {
+    width: 40%;
+    background: #30a8ff;
+  }
+}
+@-webkit-keyframes progress-text-html {
+  to {
+    --num: 75;
+  }
+}
+@keyframes progress-text-html {
+  to {
+    --num: 75;
+  }
+}
+@-webkit-keyframes progress-text-css {
+  to {
+    --num: 60;
+  }
+}
+@keyframes progress-text-css {
+  to {
+    --num: 60;
+  }
+}
+@-webkit-keyframes progress-text-bootstrap {
+  to {
+    --num: 35;
+  }
+}
+@keyframes progress-text-bootstrap {
+  to {
+    --num: 35;
+  }
+}
+@-webkit-keyframes progress-text-javascript {
+  to {
+    --num: 20;
+  }
+}
+@keyframes progress-text-javascript {
+  to {
+    --num: 20;
+  }
+}
+@-webkit-keyframes progress-text-photoshop {
+  to {
+    --num: 40;
+  }
+}
+@keyframes progress-text-photoshop {
+  to {
+    --num: 40;
+  }
+}
+.sidePageSection .references p {
+  margin: 40px 10px 0 10px;
+  color: #112d32;
+}
+.sidePageSection .references p span {
+  font-family: "League Script";
+  font-size: 0.9em;
+  color: #6e6658;
+}
+.sidePageSection .references ul {
+  justify-content: center;
+  display: flex;
+  list-style: none;
+  width: 100%;
+}
+.sidePageSection .references ul li {
+  width: 80px;
+  height: 80px;
+  margin: 30px 20px;
+  border-radius: 10px;
+  opacity: 0.7;
+  transition: 0.55s;
+}
+.sidePageSection .references ul li:hover {
+  opacity: 1;
+}
+.sidePageSection .references ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.sidePageSection .references ul .apple {
+  background: url("img/apple.png") center no-repeat;
+  background-size: cover;
+}
+.sidePageSection .references ul .spotify {
+  background: url("img/spotify.png") center no-repeat;
+  background-size: cover;
+}
+.sidePageSection .references ul .tatrabanka {
+  background: url("img/tatrabanka.png") center no-repeat;
+  background-size: cover;
+}
+.sidePageSection .references .firstPage li {
+  background: url("img/firstWeb.png") center no-repeat;
+  background-size: cover;
+}
+
+.contactPage {
+  padding-top: 130px;
+  display: block;
+}
+.contactPage div {
+  margin: auto;
+  width: 90%;
+  height: 64vw;
+  max-width: 62vw;
+  max-height: 750px;
+  background: url("graphics/postcard.png") center no-repeat;
+  background-size: contain;
+}
+
+footer {
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background: #112d32;
+  text-align: center;
+  color: rgb(137, 190, 189);
+  z-index: 220;
+}
+footer p {
+  padding: 10px 0 10px 0;
+}
+footer div {
+  display: flex;
+  justify-content: center;
+}
+footer div a {
+  height: 32px;
+  width: 32px;
+  display: block;
+  margin: 0 10px 0 10px;
+  transition: background 0.55s;
+}
+footer div a:first-child {
+  background: url("img/facebooklogo.png") center;
+  background-size: 32px;
+}
+footer div a:first-child:hover {
+  background: url("img/facebooklogoHover.png") center;
+  background-size: 32px;
+}
+footer div a:last-child {
+  background: url("img/instagramLogo.png") center;
+  background-size: 32px;
+}
+footer div a:last-child:hover {
+  background: url("img/instagramLogohover.png") center;
+  background-size: 32px;
+}
+
+@media screen and (min-width: 586px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px 5px 10px;
+  }
+  header nav .logoContainer {
+    height: 80px;
+    padding-top: 12px;
+    margin-bottom: 6px;
+    width: 98%;
+  }
+  header nav .logoContainer a {
+    width: 188px;
+    height: 62px;
+  }
+  header nav .logoContainer a span:first-child {
+    font-size: 2.2em;
+  }
+  header nav .logoContainer a span:last-child {
+    font-size: 0.87em;
+    line-height: auto;
+    padding-top: 5px;
+  }
+  header ul {
+    display: flex;
+    flex-direction: row;
+  }
+  header ul li {
+    width: 18%;
+    font-size: 0.7em;
+  }
+  header ul li a {
+    width: 100%;
+  }
+  header ul li:last-child a {
+    padding: 3px 3px 3px 3px;
+  }
+  section .image {
+    width: 70%;
+    margin: auto;
+  }
+  section .image .image1 {
+    top: 616px;
+  }
+  section .image .image2 {
+    top: 610px;
+  }
+  section .image .image3 {
+    top: 604px;
+  }
+  section .image .image4 {
+    top: 598px;
+  }
+  section .image .image5 {
+    top: 592px;
+  }
+  section .image .image6 {
+    top: 586px;
+  }
+  section .image .image7 {
+    top: 580px;
+  }
+}
+.sidePageSection .photos {
+  width: 45%;
+}
+
+@media screen and (min-width: 784px) {
+  header {
+    position: fixed;
+    width: 100%;
+    height: 84px;
+    flex-direction: row;
+    z-index: 120;
+  }
+  header nav {
+    flex-direction: row;
+    height: 84px;
+    width: 100%;
+  }
+  header nav .logoContainer {
+    position: absolute;
+    width: 38%;
+    border-bottom: none;
+    border-right: 1px solid rgb(137, 190, 189);
+    height: 100%;
+  }
+  header nav ul {
+    width: 60%;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    max-width: 624px;
+  }
+  header nav ul li {
+    margin-left: 10px;
+  }
+  header nav ul li a {
+    font-size: 1.4em;
+  }
+  header nav ul li:last-child {
+    width: 96px;
+    margin: auto;
+  }
+  header nav ul li:last-child a {
+    margin: auto;
+    border: none;
+  }
+  section {
+    display: flex;
+    flex-direction: row;
+  }
+  section .image {
+    margin: 0;
+    width: 50%;
+    height: 90vh;
+  }
+  section .image div {
+    overflow-y: hidden;
+  }
+  section .image .image1 {
+    top: 248px;
+    left: calc(50% - 330px);
+  }
+  section .image .image2 {
+    top: 242px;
+    left: calc(50% - 336px);
+  }
+  section .image .image3 {
+    top: 236px;
+    left: calc(50% - 342px);
+  }
+  section .image .image4 {
+    top: 230px;
+    left: calc(50% - 348px);
+  }
+  section .image .image5 {
+    top: 224px;
+    left: calc(50% - 354px);
+  }
+  section .image .image6 {
+    top: 218px;
+    left: calc(50% - 360px);
+  }
+  section .image .image7 {
+    top: 212px;
+    left: calc(50% - 366px);
+  }
+  section .heading {
+    width: 45%;
+    padding: 443px 0;
+    text-align: left;
+  }
+  section .heading .animated-title {
+    width: 50%;
+  }
+  .sidePageSection {
+    padding: 88px 20px 0 20px;
+    display: flex;
+    flex-direction: row;
+  }
+  .sidePageSection .articles {
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    justify-content: center;
+  }
+  .sidePageSection .photos {
+    justify-content: center;
+    width: 50%;
+  }
+  .sidePageSection .photos a img {
+    width: 50%;
+  }
+  .sidePageSection .progressSection {
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1184px) {
+  header {
+    height: 62px;
+  }
+  header nav {
+    height: 62px;
+  }
+  header nav .logoContainer {
+    padding-top: 5px;
+  }
+  header nav ul {
+    top: 10px;
+  }
+  section .image {
+    width: 45%;
+  }
+  section .image .image1 {
+    width: 356px;
+    height: 582px;
+    background-size: cover;
+    left: calc(50% - 30px - 38vw);
+    top: 160px;
+  }
+  section .image .image2 {
+    width: 368px;
+    height: 594px;
+    left: calc(50% - 36px - 38vw);
+    top: 154px;
+  }
+  section .image .image3 {
+    width: 380px;
+    height: 606px;
+    left: calc(50% - 42px - 38vw);
+    top: 148px;
+  }
+  section .image .image4 {
+    width: 392px;
+    height: 618px;
+    left: calc(50% - 48px - 38vw);
+    top: 142px;
+  }
+  section .image .image5 {
+    width: 404px;
+    height: 630px;
+    left: calc(50% - 54px - 38vw);
+    top: 136px;
+  }
+  section .image .image6 {
+    width: 416px;
+    height: 642px;
+    left: calc(50% - 60px - 38vw);
+    top: 130px;
+  }
+  section .image .image7 {
+    width: 428px;
+    height: 654px;
+    left: calc(50% - 66px - 38vw);
+    top: 124px;
+  }
+  section .heading .animated-title {
+    font-size: 1.6em;
+  }
+  .sidePageSection .articles {
+    padding: 0 0 0 10%;
+    font-size: 1.2em;
+  }
+  .sidePageSection .photos a img {
+    max-width: 290px;
+  }
+}/*# sourceMappingURL=style.css.map */

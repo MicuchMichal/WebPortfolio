@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="sk" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="popis osoby" content="zivotopis programatora Michala Micucha">
+    <meta name="keywords" content="portfolio, programator, frontend">
+    <meta name="author" content="Michal Micuch">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="formStyle.css">
+    <link rel="shortcut icon" href="img/titleImg.png">
+    <title>Formular</title>
+</head>
+
+<body>
+    <div class="background-html-tags-section" id="bacgrond-section">&emsp;&lt;Section&gt;</div>
+    <div class="background-html-tags-section" id="background-form">&emsp;&emsp;&emsp;&lt;form&gt;</div>
+<header>
+
+    <div id="name-side" >
+        <div class="name-content-side">
+            <div class="name-style">F</div>
+            <div class="name-style">o</div>
+            <div class="name-style">r</div>
+            <div class="name-style">m</div>
+            <div class="name-style">u</div>
+            <div class="name-style">l</div>
+            <div class="name-style">a</div>
+            <div class="name-style">r</div>
+            <div class="name-style">:</div>
+        </div>
+    </div>
+</header>
+<section>
+    <p>
+        Tento formulár bol vytvorený na základe požiadaviek pre úspešné absolvovanie predmetu Webové technológie a dizajn.
+    </p><br>
+
+    <script>
+        function chckcontrolb(j){
+            total = 0;
+            for(i = 0; i < document.formular.dislike.length;i++){
+                if(document.formular.dislike[i].checked){
+                    total=total+1;
+                }
+            }
+            if(total>2){
+                alert("Prosim zaskrtni maximalne 2 policka")
+                document.formular.dislike[j].checked=false
+                return
+            }
+            return false
+        }
+    </script>
+
+    <script>
+        function chckcontrola(j){
+            total = 0;
+            for(i = 0; i < document.formular.like.length;i++){
+                if(document.formular.like[i].checked){
+                    total=total+1;
+                }
+            }
+            if(total>2){
+                alert("Prosim zaskrtni maximalne 2 policka")
+                document.formular.like[j].checked=false
+                return
+            }
+            return false
+        }
+    </script>
+
+    <form method="post" name="formular">
+        <fieldset>
+        <legend>Osobne udaje</legend>
+
+            <div class="contact-input" >
+                <div class="personal-data">
+                    <label for="meno">Meno:</label><br>
+                    <input type="text" id="meno" name="meno" required/><br>
+                    <label for="priezvisko">Priezvisko:</label><br>
+                    <input type="text" id="priezvisko" name="priezvisko" required/><br>
+                    <label for="vek">Vek:</label><br>
+                    <input type="number" id="vek" name="vek" min="0" max="120" required/>
+                </div>
+                <div class="personal-data">
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required/><br>
+                    <label for="mobil">Telefónne číslo</label><br>
+                    <input type="tel" id="mobil" name="mobil" pattern="[0-9]{9}" required/><br>
+                </div>
+            </div>
+            <button type="reset" class="reset-button">Reset</button>
+        </fieldset>
+    <fieldset>
+        <legend>Hodnotenie stranky</legend>
+            <div class="design">
+                <p>Ako velmi sa ti paci dizajn stranky?</p>
+                <div class="margin-of-inputs">
+                <input type="radio" id="verylike" name="design" value="Velmi sa mi paci">
+                <label for="verylike">Velmi sa mi paci</label><br><br>
+                <input type="radio" id="like" name="design" value="Paci sa mi">
+                <label for="like">Paci sa mi</label><br><br>
+                <input type="radio" id="average" name="design" value="neviem">
+                <label for="average">neviem</label><br><br>
+                <input type="radio" id="notverylike" name="design" value="nepaci sa mi">
+                <label for="notverylike">nepaci sa mi</label><br><br>
+                <input type="radio" id="dislike" name="design" value="Velmi sa mi nepaci">
+                <label for="dislike">Velmi sa mi nepaci</label>
+                </div>
+            </div>
+        <div class="implementations">
+            <p>Na stupnici od 1 (najhorsie) do 10 (najlepsie) ohodnot implementaciu homepage</p>
+            <div class="margin-of-inputs">
+                <label for="homepage1">najhorsie</label>
+                <input type="radio" id="homepage1" name="homepage" value="1">
+                <label for="homepage2"></label>
+                <input type="radio" id="homepage2" name="homepage" value="2">
+                <label for="homepage3"></label>
+                <input type="radio" id="homepage3" name="homepage" value="3">
+                <label for="homepage4"></label>
+                <input type="radio" id="homepage4" name="homepage" value="4">
+                <label for="homepage5"></label>
+                <input type="radio" id="homepage5" name="homepage" value="5">
+                <label for="homepage6"></label>
+                <input type="radio" id="homepage6" name="homepage" value="6">
+                <label for="homepage7"></label>
+                <input type="radio" id="homepage7" name="homepage" value="7">
+                <label for="homepage8"></label>
+                <input type="radio" id="homepage8" name="homepage" value="8">
+                <label for="homepage9"></label>
+                <input type="radio" id="homepage9" name="homepage" value="9">
+                <input type="radio" id="homepage10" name="homepage" value="10">
+                <label for="homepage10">najlepsie</label>
+            </div>
+        </div>
+        <div class="implementations">
+            <p>Na stupnici od 1 (najhorsie) do 10 (najlepsie) ohodnot implementaciu podstranok</p>
+            <div class="margin-of-inputs">
+                <label for="sidepage1">najhorsie</label>
+                <input type="radio" id="sidepage1" name="sidepage" value="1">
+                <label for="sidepage2"></label>
+                <input type="radio" id="sidepage2" name="sidepage" value="2">
+                <label for="sidepage3"></label>
+                <input type="radio" id="sidepage3" name="sidepage" value="3">
+                <label for="sidepage4"></label>
+                <input type="radio" id="sidepage4" name="sidepage" value="4">
+                <label for="sidepage5"></label>
+                <input type="radio" id="sidepage5" name="sidepage" value="5">
+                <label for="sidepage6"></label>
+                <input type="radio" id="sidepage6" name="sidepage" value="6">
+                <label for="sidepage7"></label>
+                <input type="radio" id="sidepage7" name="sidepage" value="7">
+                <label for="sidepage8"></label>
+                <input type="radio" id="sidepage8" name="sidepage" value="8">
+                <label for="sidepage9"></label>
+                <input type="radio" id="sidepage9" name="sidepage" value="9">
+                <input type="radio" id="sidepage10" name="sidepage" value="10">
+                <label for="sidepage10">najlepsie</label>
+            </div>
+        </div>
+        <div class="implementations">
+            <p>Na stupnici od 1 (najhorsie) do 10 (najlepsie) ohodnot implementaciu galerie</p>
+            <div class="margin-of-inputs">
+                <label for="galery1">najhorsie</label>
+                <input type="radio" id="galery1" name="galery" value="1">
+                <label for="galery2"></label>
+                <input type="radio" id="galery2" name="galery" value="2">
+                <label for="galery3"></label>
+                <input type="radio" id="galery3" name="galery" value="3">
+                <label for="galery4"></label>
+                <input type="radio" id="galery4" name="galery" value="4">
+                <label for="galery5"></label>
+                <input type="radio" id="galery5" name="galery" value="5">
+                <label for="galery6"></label>
+                <input type="radio" id="galery6" name="galery" value="6">
+                <label for="galery7"></label>
+                <input type="radio" id="galery7" name="galery" value="7">
+                <label for="galery8"></label>
+                <input type="radio" id="galery8" name="galery" value="8">
+                <label for="galery9"></label>
+                <input type="radio" id="galery9" name="galery" value="9">
+                <input type="radio" id="galery10" name="galery" value="10">
+                <label for="galery10">najlepsie</label>
+            </div>
+        </div>
+        <div class="implementations">
+            <p>Na stupnici od 1 (najhorsie) do 10 (najlepsie) ohodnot implementaciu blogu</p>
+            <div class="margin-of-inputs">
+                <label for="blogu1">najhorsie</label>
+                <input type="radio" id="blogu1" name="blogu" value="1">
+                <label for="blogu2"></label>
+                <input type="radio" id="blogu2" name="blogu" value="2">
+                <label for="blogu3"></label>
+                <input type="radio" id="blogu3" name="blogu" value="3">
+                <label for="blogu4"></label>
+                <input type="radio" id="blogu4" name="blogu" value="4">
+                <label for="blogu5"></label>
+                <input type="radio" id="blogu5" name="blogu" value="5">
+                <label for="blogu6"></label>
+                <input type="radio" id="blogu6" name="blogu" value="6">
+                <label for="blogu7"></label>
+                <input type="radio" id="blogu7" name="blogu" value="7">
+                <label for="blogu8"></label>
+                <input type="radio" id="blogu8" name="blogu" value="8">
+                <label for="blogu9"></label>
+                <input type="radio" id="blogu9" name="blogu" value="9">
+                <input type="radio" id="blogu10" name="blogu" value="10">
+                <label for="blogu10">najlepsie</label>
+            </div>
+        </div>
+        <div class="implementations">
+             <p>Co sa ti najviac paci na mojej stranke? (vyber maximalne dve moznosti)</p>
+             <div class="margin-of-checkbox">
+                <input type="checkbox" id="LikeDizajn" name="like" value="LikeDizajn" onclick="chckcontrola(0);">
+                <label for="LikeDizajn">Dizajn</label><br>
+                <input type="checkbox" id="LikeUI" name="like" value="LikeUI" onclick="chckcontrola(1);">
+                <label for="LikeUI">Pouzivatelske rozhranie</label><br>
+                <input type="checkbox" id="Likeform" name="like" value="Likeform" onclick="chckcontrola(2);">
+                <label for="Likeform">Implementacia formulara</label><br>
+                <input type="checkbox" id="Likecolors" name="like" value="Likecolors" onclick="chckcontrola(3);">
+                <label for="Likecolors">farebna paleta stranky</label><br>
+                <input type="checkbox" id="LikeGallery" name="like" value="LikeGallery" onclick="chckcontrola(4);">
+                <label for="LikeGallery">Implementacia galerie</label><br>
+                <input type="checkbox" id="LikeRespozivita" name="like" value="LikeRespozivita" onclick="chckcontrola(5);">
+                <label for="LikeRespozivita">Responzivita</label>
+             </div>
+        </div>
+        <div class="implementations" >
+             <p>Co sa ti najmenej paci na mojej stranke? (vyber maximalne dve moznosti)</p>
+             <div class="margin-of-checkbox" >
+                <input type="checkbox" id="DislikeDizajn" name="dislike" value="DislikeDizajn" onclick="chckcontrolb(0);">
+                <label for="DislikeDizajn">Dizajn</label><br>
+                <input type="checkbox" id="DislikeUserinterface" name="dislike" value="DislikeUserinterface" onclick="chckcontrolb(1);">
+                <label for="DislikeUserinterface">Pouzivatelske rozhranie</label><br>
+                <input type="checkbox" id="Dislikeform" name="dislike" value="Dislikeform" onclick="chckcontrolb(2);">
+                <label for="Dislikeform">Implementacia formulara</label><br>
+                <input type="checkbox" id="Dislikecolors" name="dislike" value="Dislikecolors" onclick="chckcontrolb(3);">
+                <label for="Dislikecolors">farebna paleta stranky</label><br>
+                <input type="checkbox" id="DislikeGallery" name="dislike" value="DislikeGallery" onclick="chckcontrolb(4);">
+                <label for="DislikeGallery">Implementacia galerie</label><br>
+                <input type="checkbox" id="DislikeRespozivita" name="dislike" value="DislikeRespozivita" onclick="chckcontrolb(5);">
+                <label for="DislikeRespozivita">Responzivita</label>
+             </div>
+        </div>
+            <div class="implementations">
+                <label for="zaverecneHodnotenie">Ak chces na zaver este nieco dodat:</label><br>
+                <textarea class="textarea" maxlength="1000" id="zaverecneHodnotenie" name="zaver" placeholder="Zaverecne pripomienky"></textarea>
+            </div>
+            <input type="submit" class="submit-button">
+        </fieldset>
+    </form>
+</section>
+
+    <div class="background-html-tags-section" id="background-h1-side">&emsp;&emsp;&emsp;&lt;/form&gt;</div>
+    <p id="right-bootom-text">Formulár</p>
+</body>
+
+</html>

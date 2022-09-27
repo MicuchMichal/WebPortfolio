@@ -1,0 +1,415 @@
+body{
+    background-color: #1d1d1d;
+    margin: 0;
+    font-family: "Verdana", monospace;
+    color: white;
+}
+header{
+    background: #131313;
+    position: fixed;
+    width: 100px;
+    top: 0;
+    bottom: 0;
+    min-width: 100px;
+    color: white;
+}
+header img{
+    border-radius: 50%;
+    width: 100px;
+    background-color: black;
+}
+header img:hover{
+    animation: rotation ease-in-out 0.4s forwards;
+}
+@keyframes rotation {
+    from {transform: rotate(0deg);}
+    80% {transform: rotate(220deg);}
+    95% {transform: rotate(160deg);}
+    to {transform: rotate(180deg);}
+}
+header a{
+    text-decoration: none;
+    color: #3e3e3e;
+    font-size: 1.4em;
+}
+header a:hover{
+    transition: 0.2s;
+    color: #5b008b;
+}
+header nav{
+    text-align: center;
+    padding: 350px 0;
+    margin: 50px 0;
+}
+section h1{
+    color: white;
+    font-size: 5em;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-bottom: 1px solid #ff4000;
+}
+section table{
+    font-size: 1.1em;
+    width: 100%;
+}
+section table td{
+    padding: 10px;
+}
+section table tr:nth-child(odd){
+    background-color: #212121;
+}
+section table tr:nth-child(even){
+    background-color: #2f2f2f;
+}
+section table th{
+    background-color: black;
+}
+section table td:nth-child(1){
+    width: 130px;
+}
+section table td:nth-child(2){
+    width: 250px;
+}
+section h2{
+    border-bottom: 1px solid white;
+    margin-top: 50px;
+}
+.tabulky-css td:nth-child(2){
+    width: 550px;
+}
+.tabulky-css td:nth-child(4){
+    width: 300px;
+}
+.tabulky-css-2 td:nth-child(1){
+    width: 130px;
+}
+.tabulky-css-2 td:nth-child(2){
+    width: 350px;
+}
+#section-table{
+    margin-left: 120px;
+    margin-top: 120px;
+    width: 80%;
+    border: 1px solid #7b7b7b;
+    border-top: 2px solid #ff4000;
+    height: 7730px;
+}
+#section-table-css1{
+    margin-left: 120px;
+    margin-top: 120px;
+    width: 80%;
+    border: 1px solid #7b7b7b;
+    border-top: 2px solid #ff4000;
+    height: 7450px;
+}
+#section-table-css2{
+    margin-left: 120px;
+    margin-top: 120px;
+    width: 80%;
+    border: 1px solid #7b7b7b;
+    border-top: 2px solid #ff4000;
+    height: 5070px;
+}
+#section-table-bootstrap1{
+    margin-left: 120px;
+    margin-top: 120px;
+    width: 80%;
+    border: 1px solid #7b7b7b;
+    border-top: 2px solid #ff4000;
+    height: 5570px;
+}
+#section-table-bootstrap2{
+    margin-left: 120px;
+    margin-top: 120px;
+    width: 80%;
+    border: 1px solid #7b7b7b;
+    border-top: 2px solid #ff4000;
+    height: 10420px;
+}
+#section-table-scss{
+    margin-left: 120px;
+    margin-top: 120px;
+    width: 80%;
+    border: 1px solid #7b7b7b;
+    border-top: 2px solid #ff4000;
+    height: 3500px;
+}
+#section-content{
+    height: 2000px;
+    margin-right: 100px;
+    margin-left: 100px;
+    width: auto;
+}
+.background-html-tags-section{
+    position: relative;
+    font-family: "Segoe Script", monospace;
+    font-style: italic;
+    font-size: 0.9em;
+    cursor: default;
+    color: #454545;
+}
+#right-bootom-text{
+    float: right;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    color: #181818;
+    text-align: right;
+    font-size: 30vh;
+    letter-spacing: -0.15em;
+    font-weight: bold;
+    z-index: -1;
+    cursor: default;
+}
+.table-bootstrap td{
+    border: 2px solid #1d1d1d;
+    margin: 0px;
+    padding: 5px;
+}
+.table-bootstrap th{
+    border: 2px solid #1d1d1d;
+    text-align: center;
+}
+.table-bootstrap code{
+    color: white;
+}
+.hover:hover{
+    background-color: yellow;
+}
+.visited a:visited {
+    color: #00FF00;
+}
+.active:active {
+    background: #00FF;
+}
+.tabulka-jednotiek td:nth-child(odd){
+    width: 7.5%;
+    text-align: center;
+}
+.tabulka-jednotiek td:nth-child(even){
+    width: 42.5%;
+    text-align: center;
+}
+.tabulky-css td:nth-child(4){
+    font-size: 14px;
+    line-height: 1.3em;
+}
+#font-family{
+    font-family: "Ubuntu", Verdana;
+}
+.border-box{
+    height: 50px;
+    width: 200px;
+    border-bottom: 1px solid yellow;
+    border-right: 5px dotted #5454ff;
+    border-left: dotted green;
+    border-top: 10px red double;
+}
+.okraj-zaoblenie {
+    height: 50px;
+    width: 200px;
+    border: #bd60be solid 3px;
+    border-radius: 10px;
+}
+.divy-zindex{
+    opacity: 0.7;
+    width: 100px;
+    height: 100px;
+}
+#zeleny {
+    z-index: 3;
+    position: relative;
+    bottom: 130px;
+    left: 60px;
+    background-color: #01EB4B;
+    border: 1px solid green;
+}
+#modry {
+    z-index: 2;
+    position: relative;
+    bottom: 60px;
+    left: 40px;
+    background-color: #4B89FF;
+    border: 1px solid blue;
+}
+#cerveny {
+    z-index: 1;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background-color: #FF004B;
+    border: 1px solid red;
+}
+.float-elementy{
+    border: 1px solid white;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}
+.float-elementy-clear{
+    border: 1px solid white;
+    height: 5px;
+    width: 50px;
+    margin: 5px;
+}
+.h4-content h4:before{
+content: "Sekcia: ";
+}
+.h4-content h4:after{
+    content: " :koniec";
+}
+.definovanie-premennej{
+    --farba-pozadia: brown;
+}
+.pozadie{
+    color: var(--farba-pozadia);
+}
+.posuvniky{
+    height: 100px;
+    width: 100px;
+    overflow-y: scroll;
+    border: 1px solid white;
+}
+#styl02::-webkit-scrollbar {
+    width: 30px;
+}
+#styl02::-webkit-scrollbar-track {
+    background-color: #ececec;
+}
+#styl02::-webkit-scrollbar-thumb {
+    background-color: #8e8e8e;
+}
+#styl03::-webkit-scrollbar {
+    width: 30px;
+}
+#styl03::-webkit-scrollbar-track {
+    background-color: rgb(94, 133, 250);
+    border-radius: 10px;
+}
+#styl03::-webkit-scrollbar-thumb {
+    background-color: blue;
+}
+#styl04::-webkit-scrollbar {
+    width: 20px;
+}
+#styl04::-webkit-scrollbar-track {
+    background-color: rgb(195, 129, 129);
+    border-radius: 10px;
+}
+#styl04::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 10px;
+}
+.kurzory-tabulka td:nth-child(1){
+    width: 10%;
+}
+.divy-kurzory{
+    width: 150px;
+    height: 50px;
+    background: #888888;
+    border: white 1px solid;
+    border-radius: 15px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 0.8em;
+    margin: 10px;
+}
+.divy-kurzory:hover{
+    background: #c9c9c9;
+}
+.orezanie-pozadia{
+    width: 250px;
+    padding: 10px;
+    border: 5px dotted #616161;
+    margin: 5px;
+    background-color: blue;
+}
+@keyframes farby {
+    0% {background-color: red;}
+    33% {background-color: green;}
+    67% {background-color: blue;}
+    100% {background-color: red}
+}
+.animacia{
+    animation: farby 5s infinite;
+}
+.animace2 {
+    width: 120px;
+    animation: pulz 3s infinite;
+}
+@keyframes pulz {
+    from {transform: scale(1);}
+    to {transform: scale(1.7);}
+}
+.animace3 {
+    animation: pohyb 10s infinite;
+}
+@keyframes pohyb {
+    from {margin-left: 0;}
+    50% {margin-left: 40px;}
+    to {margin-left: 80px;}
+}
+.kruh{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: #00e2ff;
+}
+@keyframes animacia-gule {
+    0% {margin-left: 0;}
+    50% {margin-left: 90%;}
+    100% {margin-left: 0;}
+}
+#linear-animacia{
+    animation: animacia-gule 5s linear infinite;
+}
+#ease-animacia{
+    animation: animacia-gule 5s ease infinite;
+}
+#ease-in-animacia{
+    animation: animacia-gule 5s ease-in infinite;
+}
+#ease-out-animacia{
+    animation: animacia-gule 5s ease-out infinite;
+}
+#ease-in-out-animacia{
+    animation: animacia-gule 5s ease-in-out infinite;
+}
+#step-start-animacia{
+    animation: animacia-gule 5s step-start infinite;
+}
+#step-end-animacia{
+    animation: animacia-gule 5s step-end infinite;
+}
+.transform-krabica{
+    background-color: #2b4995;
+    width: 120px;
+    height: 90px;
+    margin-left: 75px;
+}
+@keyframes animace1{
+    0%{transform: matrix(1,0,0,1,0,0);}
+    50%{transform: matrix(1,-1,1,1,0,0);}
+    100%{transform: matrix(1,0,0,1,0,0);}
+}
+#animation-matrix{
+    animation: animace1 5s linear infinite;
+}
+#animation-rotate{
+    animation: animace3 5s linear infinite;
+}
+@keyframes animace3{
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(90deg);}
+    100%{transform: rotate(0deg);}
+}
+#animation-skew{
+    animation: animace8 5s linear infinite;
+}
+@keyframes animace8{
+    0%{transform: skew(0,0);}
+    50%{transform: skew(30deg, 30deg);}
+    100%{transform: skew(0,0);}
+}

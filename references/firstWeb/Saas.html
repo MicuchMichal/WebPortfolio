@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="sk">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="Css" content="scss preprocessor">
+    <meta name="keywords" content="portfolio, scss">
+    <meta name="author" content="Michal Micuch">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="blog.css">
+    <link rel="shortcut icon" href="img/titleImg.png">
+    <title>Saas</title>
+</head>
+
+<body>
+<header class="ahoj">
+    <a href="index.html">
+        <img src="img/MMlogowhite.png" alt="Logo programatora Michal">
+    </a>
+    <nav>
+        <a href="Blog.html">Blog</a>
+    </nav>
+</header>
+<section>
+    <div id="section-table-scss">
+        <h1>Saas preprocesor</h1>
+        <div id="section-content">
+            <h2>Zakladne funkcie Scss</h2>
+            <table class="tabulky-css">
+                <tr>
+                    <th style="width: 25%; text-align:center">popis</th>
+                    <th style="width: 25%">priklad</th>
+                    <th>vysvetlenie</th>
+                </tr>
+                <tr>
+                    <td>
+                        hniezdenie je štýl zápisu, ktorý umožňuje vnorovanie štýlov do seba. Platí všeobecné pravidlo maximalne 4 vnorení.
+                    </td>
+                    <td>
+                        <code>
+                            div<br>
+                            {<br>
+                            &emsp;&emsp;background: white;<br>
+                            &emsp;&emsp;width: 900px;<br>
+                            &emsp;&emsp;margin: 0 auto;<br>
+                            &emsp;&emsp;padding: 5px 10px;<br>
+                            &emsp;&emsp;border: 1px solid #ccc;<br>
+                            &emsp;&emsp;p<br>
+                            &emsp;&emsp;{<br>
+                            &emsp;&emsp;&emsp;&emsp;color: gray;<br>
+                            &emsp;&emsp;&emsp;&emsp;font-family: 'Arvo', serif;<br>
+                            &emsp;&emsp;&emsp;&emsp;&:hover<br>
+                            &emsp;&emsp;&emsp;&emsp;{<br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;color: black;<br>
+                            &emsp;&emsp;&emsp;&emsp;}<br>
+                            &emsp;&emsp;}<br>
+                            }<br>
+                        </code>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>V <code>div</code> elemente mame rozne styly</li>
+                            <li>do div elementu sa vlozi (nesting - uhniezdi) <code>p</code> element</li>
+                            <li>vsetky styly v <code>p</code> elemente sa ostyluju len v tomto dive a nikde inde na stranke</li>
+                            <li>& - znamena oznacenie rodicovskeho elemnentu - v tomto pripade <code>p</code> element</li>
+                            <li>vsetky <code>p</code> elementy v <code>div</code>elemente maju teda hover efekt s ciernou farbou pisma</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>$ - premenne</td>
+                    <td>
+                        <code>
+                            $primarna-farba: gray;<br>
+                            $sekundarna-farba: black;<br>
+                            $pozadie-divu: white;<br>
+                            $padding-divu: 10%;<br>
+                            $pismo-nadpis: 'Arvo', serif;<br><br>
+                            div {<br>
+                            &emsp;&emsp;background: $pozadie-divu;<br>
+                            &emsp;&emsp;padding: $padding-divu;<br>
+                            &emsp;&emsp;color: $primarna-farba;<br>
+                            &emsp;&emsp;h2 {<br>
+                            &emsp;&emsp;&emsp;&emsp;color: $sekundarna-farba;<br>
+                            &emsp;&emsp;&emsp;&emsp;font-family: $pismo-nadpis;<br>
+                            &emsp;&emsp;}<br>
+                            }
+                        </code>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Premenna sa oznacuje $ a mozem do nej ulozit akukolvek hodnotu</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>@import - pomocou tejto funkcie importujeme externe subory do scss suboru</td>
+                    <td>
+                        <ul>
+                            <li>@import "nazov-suboru.scss";</li>
+                            <li>@import "premenne.scss";</li>
+                            <li>@import "fonty.scss";</li>
+                            <li>@import "pozadia.scss";</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Tymto mozem velmi sprehladnit kod, ked si vytvorim viacero scss suborov a tie nalinkujem do jedneho hlavneho</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>@mixin - casti kodu ktore sa opakuju</td>
+                    <td>
+                        <code>
+                            @mixin flexCenter {<br>
+                            &emsp;&emsp;display: flex;<br>
+                            &emsp;&emsp;justify-content: center;<br>
+                            &emsp;&emsp;align-items:center;<br>
+                            }<br>
+                            header {<br>
+                            &emsp;&emsp;@include flexCenter();<br>
+                            }<br>
+                            body {<br>
+                            &emsp;&emsp;@include flexCenter();<br>
+                            }
+                        </code>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>
+                                do mixinu mozem vlozit lubovolne styly a tie nasledne includovat do lubovolnych elementov
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>@function - funkcie</td>
+                    <td>
+                        <code>
+                            @function sirka($prve-cislo, $druhe-cislo) {<br>
+                            @return ($prve-cislo + $druhe-cislo) * 2;<br>
+                            }
+                        </code>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Funkcie mozem pouzivat a volat taktiez kdekolvek v kode</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>@extend - tzv. rozsirenie</td>
+                    <td>
+                        <code>
+                            %sirka-trieda {<br>
+                            &emsp;&emsp;width: 500px;<br>
+                            }<br>
+                            div {<br>
+                            &emsp;&emsp;color: red;<br>
+                            &emsp;&emsp;@extend %sirka-trieda;<br>
+                            }<br>
+                            p {<br>
+                            &emsp;&emsp;color: blue;<br>
+                            &emsp;&emsp;@extend %sirka-trieda;<br>
+                            }
+                        </code>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>% nam nahradza bodku(triedu) respektive mriezku(ID)</li>
+                            <li>tieto casti kodu si mozem vytvorit ako take triedy a pouzivat kdekolvek v kode</li>
+                            <li>v podstate su to take premenne s lubovolnym mnozstvom kodu</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Podmienky:<br>
+                        &emsp;&emsp;@if<br>
+                        &emsp;&emsp;@else if<br>
+                        &emsp;&emsp;@else
+                    </td>
+                    <td>
+                        <code>
+                            $sirka : 500px;<br><br>
+                            p {<br>
+                            &emsp;&emsp;@if $sirka < 500px<br>
+                            &emsp;&emsp;{<br>
+                            &emsp;&emsp;&emsp;&emsp;background: red;<br>
+                            &emsp;&emsp;}<br>
+                            &emsp;&emsp;@else if $sirka == 500px<br>
+                            &emsp;&emsp;{<br>
+                            &emsp;&emsp;&emsp;&emsp;background: green;<br>
+                            &emsp;&emsp;}<br>
+                            &emsp;&emsp;@else<br>
+                            &emsp;&emsp;{<br>
+                            &emsp;&emsp;&emsp;&emsp;background: blue;<br>
+                            &emsp;&emsp;}<br>
+                            }
+                        </code>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>podmienky platia podobne ako v C++</li>
+                            <li>V tomto pripade plati ze ak je sirka mensia ako 500px pozadie bude cervene</li>
+                            <li>ak je sirka rovnych 500px pozadie bude zelene</li>
+                            <li>v opacnom priade bude pozadie modre</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <h2>Datove typy</h2>
+            <table class="tabulky-css">
+                <tr>
+                    <th style="width: 15%; text-align:center">popis</th>
+                    <th style="width: 45%">priklad</th>
+                    <th>vysvetlenie</th>
+                </tr>
+                <tr>
+                    <td>cisla</td>
+                    <td>
+                        <ul>
+                            <li>percentage(0.23) = vrati 23%</li>
+                            <li>round(33.6) = vrati 34 (zaokruhli k najblizsiemu celemu cislu)</li>
+                            <li>abs(-44px) = vrati absolutnu hodnotu 44px</li>
+                            <li>min(7px, 34px, 3px) = vrati najmensiu hodnotu 3px</li>
+                            <li>max(44px, 15px, 88px) = vrati navacsiu hodnotu 88px</li>
+                            <li>random(cislo) = vrati nahodne cislo od 1 (vratane) az po zvolene cislo</li>
+                        </ul>
+                    </td>
+                    <td>
+                        $premenna: min(20px, 30px, 10px);<br>
+                        @if $premenna == 10px {color: red}<br>
+                        <ul>
+                            <li>Definovana je premenna, ktorej hodnota je minimum z cisel v zatvorke</li>
+                            <li>podla podmienky sa dosadi za premennu 10px, tym padom podmienka plati a farba bude cervena</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>textove retazce</td>
+                    <td>
+                        <ul>
+                            <li>$a: "ahoj";</li>
+                            <li>$b: 'cavko';</li>
+                            <li>$c: nazdar;</li>
+                            <li>$d: $a + $b</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Zapis textovych retazcov pomocou premennej sa da vsetkymi styrmi sposobmi rovnako</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>farby</td>
+                    <td><ul>
+                        <li>$hexadecimalny-zapis: #24fa9e;</li>
+                        <li>$rgba-zapis: rgba(210, 73, 19, 0.2);</li>
+                        <li>$hsla-zapis: hsla(240, 100%, 50%, 0.5);</li>
+                    </ul></td>
+                    <td>Takymto stylom mozeme do premennych ukladat len farby</td>
+                </tr>
+                <tr>
+                    <td>logicke hodnoty</td>
+                    <td>
+                        <code>
+                            color: #010203 + #040506;<br>
+                            // 01 + 04 => 05<br>
+                            // 02 + 05 => 07<br>
+                            // 03 + 06 => 09<br>
+                            // => #050709<br>
+                        </code>
+                    </td>
+                    <td>Vysledok tejto scitavacej fukcie je farba na konci a teda #050709</td>
+                </tr>
+            </table>
+            <h2>@media</h2>
+            <table class="tabulky-css">
+                <tr>
+                    <th style="width: 15%; text-align:center">popis</th>
+                    <th style="width: 45%">priklad</th>
+                    <th>vysvetlenie</th>
+                </tr>
+                <tr>
+                    <td>@media</td>
+                    <td>
+                        <code>
+                            p {<br>
+                            &emsp;&emsp;width: 50%;<br>
+                            &emsp;&emsp;margin: 0px auto;<br>
+                            &emsp;&emsp;background: yellow;<br><br>
+
+                            &emsp;&emsp;@media (min-width: 500px) {<br>
+                            &emsp;&emsp;&emsp;&emsp;background: blue;<br>
+                            &emsp;&emsp;}<br>
+                            }
+                        </code>
+                    </td>
+                    <td>@media v scss ma rovnaku funkciu ako v css. V tomto pripade bude farba pozadia modra pri 500px a viac</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <p id="right-bootom-text">Scss</p>
+</section>
+</body>
+
+</html>

@@ -1,0 +1,232 @@
+@import "variables";
+
+@media screen and (min-width: 586px) {
+    header {
+      display: flex;
+      flex-direction: column;
+      padding: 0 10px 5px 10px;
+      nav{
+        .logoContainer {
+          height: 80px;
+          padding-top: 12px;
+          margin-bottom: 6px;
+          width: 98%;
+          a {
+            width: 188px;
+            height: 62px;
+            span {
+              &:first-child {
+                font-size: 2.2em;
+              }
+              &:last-child {
+                font-size: 0.87em;
+                line-height: auto;
+                padding-top: 5px;
+              }
+            }
+          }
+        }
+      }
+      ul {
+        display: flex;
+        flex-direction: row;
+        li {
+          width: 18%;
+          font-size: 0.7em;
+          a {
+            width: 100%;
+          }
+          &:last-child {
+            a {
+              padding: 3px 3px 3px 3px;
+            }
+          }
+        }
+      }
+    }
+    section {
+      .image {
+        width: 70%;
+        margin: auto;
+        .image1 {
+          top: 616px;
+        }
+        .image2 {
+          top: 610px;
+        }
+        .image3 {
+          top: 604px;
+        }
+        .image4 {
+          top: 598px;
+        }
+        .image5 {
+          top: 592px;
+        }
+        .image6 {
+          top: 586px;
+        }
+        .image7 {
+          top: 580px;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 784px) {
+    header {
+      position: fixed;
+      width: 100%;
+      height: 84px;
+      flex-direction: row;
+      z-index: 120;
+      nav {
+        flex-direction: row;
+        height: 84px;
+        width: 100%;
+        .logoContainer {
+          position: absolute;
+          width: 38%;
+          border-bottom: none;
+          border-right: 1px solid $primaryColor;
+          height: 100%;
+        }
+        ul {
+          width: 60%;
+          position: absolute;
+          right: 0;
+          top: 20px;
+          max-width: 624px;
+          li {
+            margin-left: 10px;
+            a {
+              font-size: 1.4em;
+            }
+            &:last-child {
+              width: 96px;
+              margin: auto;
+              a {
+                margin: auto;
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    section {
+      display: flex;
+      flex-direction: row;
+      .image {
+        margin: 0;
+        width: 50%;
+        height: 90vh;
+        div {
+          overflow-y: hidden;
+        }
+        .image1 {
+          top: 248px;
+          left: calc(50% - 330px);
+        }
+        .image2 {
+          top: 242px;
+          left: calc(50% - 336px);
+        }
+        .image3 {
+          top: 236px;
+          left: calc(50% - 342px);
+        }
+        .image4 {
+          top: 230px;
+          left: calc(50% - 348px);
+        }
+        .image5 {
+          top: 224px;
+          left: calc(50% - 354px);
+        }
+        .image6 {
+          top: 218px;
+          left: calc(50% - 360px);
+        }
+        .image7 {
+          top: 212px;
+          left: calc(50% - 366px);
+        }
+      }
+      .heading {
+        width: 45%;
+        padding: 443px 0;
+        text-align: left;
+        .animated-title {
+          width: 50%;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1184px) {
+    header {
+      height: 62px;
+      nav {
+        height: 62px;
+        .logoContainer {
+          padding-top: 5px;
+        }
+        ul {
+          top: 10px;
+        }
+      }
+    }
+    section {
+      .image {
+        width: 45%;
+        .image1 {
+          width: 356px;
+          height: 582px;
+          background-size: cover;
+          left: calc(50% - 30px - 38vw);
+          top: 160px;
+        }
+        .image2 {
+          width: 368px;
+          height: 594px;
+          left: calc(50% - 36px - 38vw);
+          top: 154px;
+        }
+        .image3 {
+          width: 380px;
+          height: 606px;
+          left: calc(50% - 42px - 38vw);
+          top: 148px;
+        }
+        .image4 {
+          width: 392px;
+          height: 618px;
+          left: calc(50% - 48px - 38vw);
+          top: 142px;
+        }
+        .image5 {
+          width: 404px;
+          height: 630px;
+          left: calc(50% - 54px - 38vw);
+          top: 136px;
+        }
+        .image6 {
+          width: 416px;
+          height: 642px;
+          left: calc(50% - 60px - 38vw);
+          top: 130px;
+        }
+        .image7 {
+          width: 428px;
+          height: 654px;
+          left: calc(50% - 66px - 38vw);
+          top: 124px;
+        }
+      }
+      .heading {
+        .animated-title {
+          font-size: 1.6em;
+        }
+      }
+    }
+  }
+  
