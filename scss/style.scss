@@ -366,19 +366,19 @@ section {
     }
     @keyframes progress-html {
       to {
-        width: 75%;
+        width: 60%;
         background: #f16524;
       }
     }
     @keyframes progress-css {
       to {
-        width: 60%;
+        width: 50%;
         background: #2965f1;
       }
     }
     @keyframes progress-bootstrap {
       to {
-        width: 35%;
+        width: 45%;
         background: #880afb;
       }
     }
@@ -396,22 +396,22 @@ section {
     }
     @keyframes progress-text-html {
       to {
-        --num: 75;
+        --num: 60;
       }
     }
     @keyframes progress-text-css {
       to {
-        --num: 60;
+        --num: 50;
       }
     }
     @keyframes progress-text-bootstrap {
       to {
-        --num: 35;
+        --num: 45;
       }
     }
     @keyframes progress-text-javascript {
       to {
-        --num: 20;
+        --num: 15;
       }
     }
     @keyframes progress-text-photoshop {
